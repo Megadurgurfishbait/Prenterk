@@ -1,17 +1,21 @@
-import React from 'react';
+import React, {Component} from 'react';
 import styled  from 'styled-components';
-import BigPic from '../../Assets/Millistig/1-scs-printer-picture.jpg'
 
 
-const BigPicture = () => (
 
-    <Container>
-       <Picture/>
-    </Container>
-)
+export default class BigPicture extends Component {
 
-export default BigPicture;
+      
+      render() {
+            const style = {backgroundImage: `url(${this.props.showPicture.img})`}
+            return (
+            <Container>
+                  <Picture style={style} picture = {this.showPicture} />
+            </Container>
 
+            )
+      }
+}
 
 const Container = styled.div`
     display:flex;
@@ -23,17 +27,12 @@ const Container = styled.div`
     height: 100%;
 `;
 
-
 const Picture = styled.div`
-    background-image: url(${BigPic});
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
-
+    background-size: contain;
     width: 50%;
     height: 50%;
     margin-top: -80px;
 `;
-
-
 

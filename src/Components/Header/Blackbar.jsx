@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Logo from '../../Assets/Header/Capture.JPG';
 
-const Blackbar = () => (
+const Blackbar = (props) => (
     <BlackHeader>
         <LeftText>
             <li> Vörur </li>
@@ -12,7 +12,8 @@ const Blackbar = () => (
             <MidTextImage />
         </MidText>
         <RightText>
-            <button> Hafa samband </button>
+              {console.log(props.myClick)}
+            <button onClick={props.myClick}> Hafa samband </button>
         </RightText>
     </BlackHeader>
 );
@@ -83,5 +84,6 @@ const RightText = styled.div`
       margin-right: 2rem;
       padding: 0px; 
       cursor: pointer;
+      z-index: 400;
     }
 `;

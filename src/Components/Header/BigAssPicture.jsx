@@ -1,9 +1,18 @@
 import React from 'react';
 import styled from 'styled-components';
+import {Spring} from 'react-spring';
 
 const BigAssPicture = () => (
     <BigTitleDiv>
-        <h1> Prentverk Selfoss </h1>
+            <Spring 
+                delay={500}
+                from={{ opacity: 0, transform: 'translate3d(0,-40px,0)'}} 
+                to={{ opacity: 1, transform: 'translate3d(0,0px,0)'}}
+                >
+                  {({opacity, transform}) => (
+                        <h1 style={{opacity, transform}}> Prentverk Selfoss </h1>
+                  )}
+            </Spring>
     </BigTitleDiv>
 );
 
