@@ -1,9 +1,9 @@
 {
-  "main.css": "/static/css/main.822680d7.chunk.css",
-  "main.js": "/static/js/main.576c9905.chunk.js",
-  "main.js.map": "/static/js/main.576c9905.chunk.js.map",
-  "static/js/1.726524b5.chunk.js": "/static/js/1.726524b5.chunk.js",
-  "static/js/1.726524b5.chunk.js.map": "/static/js/1.726524b5.chunk.js.map",
+  "main.css": "/static/css/main.9816635e.chunk.css",
+  "main.js": "/static/js/main.cc224819.chunk.js",
+  "main.js.map": "/static/js/main.cc224819.chunk.js.map",
+  "static/js/1.0f756245.chunk.js": "/static/js/1.0f756245.chunk.js",
+  "static/js/1.0f756245.chunk.js.map": "/static/js/1.0f756245.chunk.js.map",
   "runtime~main.js": "/static/js/runtime~main.229c360f.js",
   "runtime~main.js.map": "/static/js/runtime~main.229c360f.js.map",
   "static/media/jolakort_3.JPG": "/static/media/jolakort_3.f295e32b.JPG",
@@ -27,8 +27,8 @@
   "static/media/location.JPG": "/static/media/location.dd69d9d6.JPG",
   "static/media/prufael.JPG": "/static/media/prufael.5e125998.JPG",
   "static/media/logo.jpg": "/static/media/logo.8c6ea4b4.jpg",
-  "static/css/main.822680d7.chunk.css.map": "/static/css/main.822680d7.chunk.css.map",
+  "static/css/main.9816635e.chunk.css.map": "/static/css/main.9816635e.chunk.css.map",
   "index.html": "/index.html",
-  "precache-manifest.ef1d89b8987f7cf81e5ba65c8174b8ef.js": "/precache-manifest.ef1d89b8987f7cf81e5ba65c8174b8ef.js",
+  "precache-manifest.1fe2d8ccec9d6bfd8c6ea3c32d69c6b7.js": "/precache-manifest.1fe2d8ccec9d6bfd8c6ea3c32d69c6b7.js",
   "service-worker.js": "/service-worker.js"
 }
