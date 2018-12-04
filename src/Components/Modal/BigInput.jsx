@@ -22,7 +22,7 @@ const Container = styled.div`
       margin: .8rem 0rem;
 `;
 
-const H4 = styled.h4`
+const H4 = styled.h2`
       display: flex;
       flex: 1 1 25%;
       margin: 0;

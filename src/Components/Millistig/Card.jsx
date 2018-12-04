@@ -41,13 +41,14 @@ export default class Card extends Component {
     background-position: center;
     background-repeat: no-repeat;
     border: 1px solid transparent;
-      transition: all .5s linear;
+      transition: all .3s ease;
+      
     &:hover {
-          border: 1px solid black;
+
           transform: scale(1.1);
-          -webkit-box-shadow: 6px 3px 5px 0px rgba(0,0,0,0.75);
-            -moz-box-shadow: 6px 3px 5px 0px rgba(0,0,0,0.75);
-            box-shadow: 6px 3px 5px 0px rgba(0,0,0,0.75);
+          -webkit-box-shadow: 2px 4px 13px 1px rgba(0,0,0,0.75);
+            -moz-box-shadow: 2px 4px 13px 1px rgba(0,0,0,0.75);
+            box-shadow: 2px 4px 13px 1px rgba(0,0,0,0.75);
     }
   `;
 

@@ -42,7 +42,7 @@ const Container = styled.div`
             white-space: nowrap;
             &:hover,
             &:active {
-                  border: none;
+                  border: 1px groove transparent;
                   transform: translateX(0px);
             }
 

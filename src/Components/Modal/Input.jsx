@@ -20,7 +20,7 @@ const Container = styled.div`
       justify-content: space-around;
       align-items: center;
 `;
-const H4 = styled.h4`
+const H4 = styled.h2`
       display: flex;
       flex: 1 1 25%;
 `;

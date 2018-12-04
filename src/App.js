@@ -6,7 +6,7 @@ import Background from "./Components/Millistig/Background";
 import Products from "./Components/Products";
 import Millimynd from "./Components/Millimynd";
 import AboutUs from "./Components/AboutUs";
-import Footer from "./Components/Footer";
+
 import Modal from "./Components/Modal";
 import scrollToComponent from 'react-scroll-to-component';
 
@@ -14,18 +14,17 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      show: true
+      show: false
     };
   }
 
     _scrollToDiv = (e) => {
-          console.log("her", e.target.id);
           switch(e.target.id) {
                 case "vorur":  
                         scrollToComponent(this.Products, { offset: 0, align: 'top', duration: 1500})
                         break;
                 default: 
-                        scrollToComponent(this.AboutUs, { offset: 0, align: 'center', duration: 1500});
+                        scrollToComponent(this.AboutUs, { offset: -20, align: 'center', duration: 1500});
                         console.log("HER111")
           }
      

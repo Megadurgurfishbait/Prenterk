@@ -5,14 +5,14 @@ import Logo from '../../Assets/Header/Capture.JPG';
 const Blackbar = (props) => (
     <BlackHeader>
         <LeftText>
-            <button id="vorur" onClick={props.button}> Vörur </button>
-            <button id="umOkkur" onClick={props.button}> Um okkur </button>
+            <Button id="vorur" onClick={props.button}> Vörur </Button>
+            <Button id="umOkkur" onClick={props.button}> Um okkur </Button>
         </LeftText>
         <MidText>
             <MidTextImage />
         </MidText>
         <RightText>
-            <button onClick={props.myClick}> Hafa samband </button>
+            <Button onClick={props.myClick}> Hafa samband </Button>
         </RightText>
     </BlackHeader>
 );
@@ -35,16 +35,7 @@ const LeftText = styled.ul`
     align-content: center;
     z-index: 50;
     
-    & li {
-      color: white;
-      display: flex;
-      align-items: center;
-      text-transform: uppercase;
-      list-style: none;
-      font-size: 1.2rem;
-      height: 100%;
-      cursor: pointer;
-    }
+
 `;
 
 const MidText = styled.div`
@@ -66,17 +57,19 @@ const MidTextImage = styled.div`
 `;
 
 
-const RightText = styled.div`
+const RightText = styled.ul`
     display: flex;
     flex: 1 1 25%;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
     color: white;
     background-color: ${props => props.theme.main};
 
-    & > button {
+`;
+
+const Button = styled.button`
       border: none;
-      height: 100%;
+      height: 60%;
       text-transform: uppercase;
       background-color: ${props => props.theme.main};
       color: white;
@@ -85,5 +78,13 @@ const RightText = styled.div`
       padding: 0px; 
       cursor: pointer;
       z-index: 400;
-    }
-`;
+      border-bottom: 1px solid transparent;
+      transition: all .5s ease;
+      
+      &:hover,
+      &:active,
+      &:focus {
+      border-bottom: 1px solid white;
+      outline: none;
+      }
+      `;

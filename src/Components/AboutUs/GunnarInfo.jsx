@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 
 const GunnarInfo = (props) => (
-
       <Container>
             <Title> Um Gunnar Óðinn Gunnarsson</Title>
             <TextContainer>
@@ -16,7 +15,6 @@ const GunnarInfo = (props) => (
                   </Sides>
             </TextContainer>
       </Container>
-
 )
 
 
@@ -25,32 +23,38 @@ export default GunnarInfo;
 const Sides = styled.div`
       display: block;
       height: 100%;
-      min-height: 300px;
+      min-height: 250px;
       width: 50%;
       font-size: ${props => props.fontSize ? "20px" : "10px"};
+      
 `;
 
 const TextContainer = styled.div`
       display:flex;
       flex-direction: row;
       flex-wrap: nowrap;
+      text-align: center;
 `;
 
 
 const Container = styled.div`
       display: flex;
       flex-direction: column;
-      align-items: center;
+      align-items: left;
       justify-content: center;
       height: 100%;
       margin: 15px;
       font-size: 12px;
+      flex: 1 1 60%;
+      max-width: 65%;
       color: white;
 `;
 const Title = styled.h1`
-      margin: 2rem 1rem;
-      font-size: 2.6rem;
-      white-space: nowrap;
+      margin: 1rem 1rem;
+      font-size: 2rem;
+      text-align: center;
+      letter-spacing: 4px;
+      text-shadow: 1px 1px gray;
 `;
 const Text = styled.p`
       margin: .5rem .5rem;

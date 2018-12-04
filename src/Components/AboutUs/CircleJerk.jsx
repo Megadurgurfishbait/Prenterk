@@ -10,6 +10,7 @@ const CircleJerk = () => (
     <Top>
       <GunnarInfo />
       <GunnarPicture />
+      <FakeNews />
     </Top>
     <Top>
       <Map />
@@ -28,19 +29,27 @@ const FakeContainer = styled.div`
   margin-top: 200px;
 `;
 
+const FakeNews = styled.div`
+      display: flex;
+      flex: 1 1 15%;
+      height: 100%;
+      min-height: 350px;
+`;
+
 const Top = styled.div`
-  max-width: 50vw;
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-around;
-  align-items: center;
-  height: 100%;
-  min-height: 400px;
-  flex: 1 1 100%;
-border-radius: 5px;
-margin: 1rem;
-padding: 1rem;
-background-color: #383536;
+      position: relative;
+      max-width: 50vw;
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      align-items: center;
+      height: 100%;
+      min-height: 350px;
+      flex: 1 1 100%;
+      border-radius: 5px;
+      margin: 1rem;
+      padding: 1rem;
+      background-color: #383536;
 `;
 
 export default CircleJerk;

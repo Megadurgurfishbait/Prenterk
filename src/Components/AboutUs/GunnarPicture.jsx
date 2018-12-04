@@ -16,12 +16,12 @@ const Container = styled.div`
       background-size: cover;
       background-repeat: no-repeat;
       height: 100%;
-      padding: 2rem 2rem;
+      position:absolute;
+      top: -75px;
+      right: -75px;
       min-height: 300px;
       min-width: 300px;
       max-height: 300px;
       max-width: 300px;
       border-radius: 100%;
-      margin: 0rem 3rem;
-
 `;
