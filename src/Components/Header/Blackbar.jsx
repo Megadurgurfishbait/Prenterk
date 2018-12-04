@@ -5,14 +5,13 @@ import Logo from '../../Assets/Header/Capture.JPG';
 const Blackbar = (props) => (
     <BlackHeader>
         <LeftText>
-            <li> Vörur </li>
-            <li> Um okkur </li> 
+            <button id="vorur" onClick={props.button}> Vörur </button>
+            <button id="umOkkur" onClick={props.button}> Um okkur </button>
         </LeftText>
         <MidText>
             <MidTextImage />
         </MidText>
         <RightText>
-              {console.log(props.myClick)}
             <button onClick={props.myClick}> Hafa samband </button>
         </RightText>
     </BlackHeader>
@@ -34,6 +33,7 @@ const LeftText = styled.ul`
     align-items: center;
     justify-content: space-around;
     align-content: center;
+    z-index: 50;
     
     & li {
       color: white;

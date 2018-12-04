@@ -7,7 +7,6 @@ const Title = (props) => (
       <Container>
             <Picture center />
             <H1>Hafa samband</H1>
-            <Close onClick={props.clicks}>Loka</Close>
       </Container>
 )
 export default Title;
@@ -29,6 +28,7 @@ const H1 = styled.h1`
       color: white;
       align-items: center;
       text-align: center;
+      font-size: 3rem;
 `;
 
 const Close = styled.span`

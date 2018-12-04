@@ -1,12 +1,11 @@
 import React, {Component} from "react";
 import styled from "styled-components";
-import Safe from "react-recaptcha"; 
 import Input from "./Input";
 import BigInput from "./BigInput";
+import Buttons from './Buttons';
 import Axios from "axios";
 import ROOT_URL from '../../config';
-import Captcha from './Captcha';
-import Buttons from './Buttons';
+
 
 
 
@@ -37,8 +36,9 @@ export default class Inputs extends Component {
       }
 
       async sendItems() {
-            console.log("HER")
+            
             const {name, email, phone, title, text} = this.state;
+            console.log({name}, {email}, {phone}, {title}, {text});
             const send = await Axios.post(`${ROOT_URL.slod}/email`, {
                   name, email, phone, title, text
             });
@@ -54,8 +54,8 @@ export default class Inputs extends Component {
         <Input change={this.getItems} name="Simanumer" />
         <Input change={this.getItems} name="Titill" />
         <BigInput change={this.getItems} name="Texti" />
-        { /*<Captcha />*/}
-        <Buttons/>
+
+        <Buttons sendItems={this.sendItems} clicks={this.props.clicks}/>
       </Container>
     );
   }
@@ -67,6 +67,7 @@ const Container = styled.div`
   height: 100%;
   flex-direction: column;
   color: white;
+  overflow:hidden;
 `;
 
 

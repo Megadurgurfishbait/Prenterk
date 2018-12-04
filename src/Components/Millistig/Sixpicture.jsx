@@ -3,12 +3,6 @@ import styled from "styled-components";
 import Card  from './Card';
 
 export default class Sixpictures extends Component  {
-
-
-      _handleHovers = () => {
-            console.log("FUCK")
-      }
-      
       render() {  
             return(
                   <Container > 

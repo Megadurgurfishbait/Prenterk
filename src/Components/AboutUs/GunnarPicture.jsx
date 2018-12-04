@@ -16,20 +16,12 @@ const Container = styled.div`
       background-size: cover;
       background-repeat: no-repeat;
       height: 100%;
-      flex: 1 1 50%;
-      border-left: 4px solid white;
+      padding: 2rem 2rem;
+      min-height: 300px;
+      min-width: 300px;
+      max-height: 300px;
+      max-width: 300px;
+      border-radius: 100%;
+      margin: 0rem 3rem;
 
-      &:hover {
-            position: absolute;
-            margin-left: auto;
-            margin-right: auto;
-            top:0;
-            left: 0;
-            right: 0;
-            height: 100%;
-            width: 100%;
-            text-align: center;
-            justify-content: center;
-            align-items: center;
-      }
 `;

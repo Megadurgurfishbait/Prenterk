@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components'
 
 const BigInput = (props) => (
-
       <Container>
             <H4>{props.name}</H4>
             <InputItem onChange={props.change } id={props.name} />
@@ -16,7 +15,8 @@ const Container = styled.div`
       display: flex;
       flex-wrap: nowrap;
       width: 100%;
-      height: 300px;
+      height: 100%;
+      max-height: 300px;
       justify-content: space-around;
       align-items: flex-start;
       margin: .8rem 0rem;
@@ -29,12 +29,13 @@ const H4 = styled.h4`
 
 `;
 
-const InputItem = styled.input`
+const InputItem = styled.textarea`
       border: none;
       height: 100%;
       border-radius: 10px;
       display: flex;
       flex: 1 1 65%;
+      padding: 5px;
 `;
 
 

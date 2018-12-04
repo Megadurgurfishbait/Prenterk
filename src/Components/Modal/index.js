@@ -2,13 +2,14 @@ import React, { Component } from "react";
 import styled from "styled-components";
 import Title from "./Title";
 import Inputs from "./Inputs";
+import { keyFrameExampleOne } from '../../Assets/Keyframes';
 
 export default class Modal extends Component {
   render() {
     return (
       <Container>
         <Title clicks={this.props.clicks} />
-        <Inputs />
+        <Inputs clicks ={this.props.clicks}/>
       </Container>
     );
   }
@@ -18,7 +19,7 @@ const Container = styled.div`
   z-index: 4000000;
   position: absolute;
   background-color: #231f20;
-  height: 100vh;
+  height: 80vh;
   width: 60vw;
   top: 5px;
   right: 0;
@@ -26,11 +27,16 @@ const Container = styled.div`
   margin-left: auto;
   margin-right: auto;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   border: none;
   border-radius: 20px;
   flex-direction: column;
   flex-wrap: nowrap;
   border: 4px solid white;
+  transition: all .6s ease;
+
+  animation: ${keyFrameExampleOne} .2s ease-in;
 `;
+
+

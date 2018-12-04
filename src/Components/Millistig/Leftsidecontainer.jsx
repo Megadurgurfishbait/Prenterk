@@ -40,6 +40,7 @@ const Container = styled.div`
 const TextSixPictures = styled.div`
   display: flex;
   flex: 1 1 50%;
+
   flex-direction: column;
   justify-content: flex-start;
   height: 70%;
@@ -47,6 +48,8 @@ const TextSixPictures = styled.div`
 
 const ItemHeading = styled.h1`
   position: relative;
+  padding: 1rem 3rem;
+
   padding-top: 50px;
   margin: 0;
   height: 20%;
@@ -58,4 +61,5 @@ const ItemText = styled.p`
   text-align: left;
   width: 100%;
   margin: 0;
+  padding: 1rem 3rem;
 `;

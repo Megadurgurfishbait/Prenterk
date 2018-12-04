@@ -3,20 +3,19 @@ import styled from 'styled-components';
 
 const Buttons = (props) => (
       <Container>
-            <Button >Senda</Button>
-            <Button danger>Hætta við</Button>
+            <Button onClick={props.sendItems} >Senda</Button>
+            <Button onClick={props.clicks} danger>Hætta við</Button>
       </Container>
 )
 
 export default Buttons;
 
 const Container = styled.div`
-      height: 20%;
-      width: 100%;
       display: flex;
       flex-wrap: nowrap;
       justify-content: space-around;
       align-items: center;
+      margin: 1rem;
 `;
 
 const Button = styled.button`

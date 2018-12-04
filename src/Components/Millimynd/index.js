@@ -9,7 +9,8 @@ const Millimynd = () =>  <Sicko />
 
 const Sicko = styled.div`
       display: block;
-      height: 80vh;
+      height: 75vh;
+      min-height: 600px;
       width: 100vw;
       background-image: url(${Picture});
       background-attachment: fixed;
@@ -18,9 +19,6 @@ const Sicko = styled.div`
       background-size: cover;
       margin-top: -100px;
       z-index: -4;
-
-
-
 `;
 
 export default Millimynd;

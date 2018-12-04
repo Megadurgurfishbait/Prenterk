@@ -1,36 +1,51 @@
-import React from 'react';
+import React, {Component} from 'react';
 import styled from 'styled-components';
 import Image from '../../Assets/AboutUs/location.JPG';
+import '../../index.css'
+import { Map as LeafletMap, TileLayer, Marker, Popup } from 'react-leaflet';
 
-const Map = () => (
+export default class Maps extends React.Component {
+      constructor() {
+        super()
+        this.state = {
+          lat: 63.9295,
+          lng: -21.01765,
+          zoom: 15
+        }
+      }
+    
 
-      <MyMap />
-
-)
-export default Map;
-
+      render() {
+        const position = [this.state.lat, this.state.lng];
+        return (
+          <LeafletMap center={position} zoom={this.state.zoom}>
+            <TileLayer
+              attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+              url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'
+            />
+            <Marker position={position}>
+              <Popup>
+                Gagnheiði 43, <br/> 800 Selfossi
+              </Popup>
+            </Marker>
+          </LeafletMap>
+        );
+      }
+    }
+     
 
 const MyMap = styled.div`
-      display: flex;
+      display: block;
       background-image: url(${Image});
-      background-size: cover;
+      background-size: contain;
       background-repeat: no-repeat;
       height: 100%;
-      flex: 1 1 50%;
-      border-right: 4px solid white;
-      position:relative;
-      transition: position 1s ease;
-
+      min-height: 500px;
+      width: 100%;
 
 
       &:hover {
-            position: absolute;
-            margin-left: auto;
-            margin-right: auto;
-            left: 0;
-            right: 0;
-            background-size: cover;
-            height: 100%;
-            width: 100%;
+            transform: scale(1.3);
+
       }
 `;

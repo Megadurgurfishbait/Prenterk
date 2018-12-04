@@ -35,14 +35,19 @@ export default class Card extends Component {
 
   const CardImage = styled.div`
     height: 100px;
-    flex: 1 1 25%;
-    margin: 3px 3px;
-    background-size: contain;
+    flex: 1 1 30%;
+    margin: 3px 8px;
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-      transition: transform .5s linear;
+    border: 1px solid transparent;
+      transition: all .5s linear;
     &:hover {
+          border: 1px solid black;
           transform: scale(1.1);
+          -webkit-box-shadow: 6px 3px 5px 0px rgba(0,0,0,0.75);
+            -moz-box-shadow: 6px 3px 5px 0px rgba(0,0,0,0.75);
+            box-shadow: 6px 3px 5px 0px rgba(0,0,0,0.75);
     }
   `;
 

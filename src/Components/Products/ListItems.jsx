@@ -22,29 +22,36 @@ const Container = styled.div`
       justify-content: center;
       align-items: center;
       flex: 1 1 20%;
-      height: 100%;
+      height: 70%;
+      min-height: 500px;
 
       & button {
             padding: 0;
             text-align: left;
             color: white;
-            margin: .2rem 0rem;
-            font-size: 1rem;
+            margin: 1rem 1rem;
+            font-size: 1.6rem;
             height: 40px;
-            width: 50%;
+            width: 65%;
             background-color: transparent;
             border: none;
-            border-bottom: 1px solid transparent;
+            border: 1px groove transparent;
             transition: all .5s;
             transform: translateX(-20px);
-            
+            text-align: center;
+            white-space: nowrap;
             &:hover,
             &:active {
                   border: none;
-                  border-bottom: 1px solid white;
                   transform: translateX(0px);
             }
 
-            
+            &:focus {
+                  background-color: #272525;
+                  border: 1px groove white;
+                  transform: scale(1.1);
+                  outline: none;
+                  border-radius: 10px;
+            }
       }
 `;

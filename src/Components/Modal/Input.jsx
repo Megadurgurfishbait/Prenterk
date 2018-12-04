@@ -16,10 +16,9 @@ const Container = styled.div`
       display: flex;
       flex-wrap: nowrap;
       width: 100%;
-      height: 35px;
+      min-height: 55px;
       justify-content: space-around;
       align-items: center;
-      margin: .5rem 0rem;
 `;
 const H4 = styled.h4`
       display: flex;
@@ -28,8 +27,10 @@ const H4 = styled.h4`
 
 const InputItem = styled.input`
       border: none;
-      height: 100%;
+      min-height: 35px;
       border-radius: 10px;
       display: flex;
       flex: 1 1 65%;
+      padding: 5px;
+      overflow:hidden;
 `;

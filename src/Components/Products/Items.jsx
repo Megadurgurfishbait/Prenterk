@@ -1,5 +1,4 @@
 import React, {Component, Fragment} from 'react';
-
 export default class Items extends Component {
 
 
@@ -15,14 +14,13 @@ export default class Items extends Component {
                   {id: "Bodskort", name: "Boðskort"}
             ];
 
-                  
+      
                   return(list.map((values, index) => (
                         <button key={index} id={values.id} onClick={this.props.myClick} >  {values.name} </button>
                   )))
           }
 
       render() {
-            console.log(this.props.myClick);
             return (
                   <Fragment>
                         {this.renderMyText()}

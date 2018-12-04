@@ -4,28 +4,29 @@ import CircleJerk from './CircleJerk';
 import Map from './Map';
 
 
-const AboutUs = () => (
+export default class AboutUs extends React.Component {
+      render() {
+            return (
+                  <Container>
+                        <CircleJerk/>
+                  </Container>
+            )
+      }
+}
 
-      <Container>
-            <CircleJerk/>
-
-      </Container>
-
-
-)
-export default AboutUs;
 
 
 const Container = styled.div`
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 120vh;
+      height: 100%;
       width: 100vw;
       background-color: #231F20;
       margin-top: -300px;
       -webkit-clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
-      clip-path: polygon(0 18%, 100% 0, 100% 100%, 0% 100%);
+      clip-path: polygon(0 13%, 100% 0, 100% 100%, 0% 100%);
+      position: relative;
 `;
 
 

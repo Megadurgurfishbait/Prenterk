@@ -13,7 +13,7 @@ const Container = styled.div`
       height: 40px;
       justify-content: center;
       align-items: center;
-      margin-top: 90px;
+      margin-top: 10%;
 `;
 
 const H1 = styled.h1`

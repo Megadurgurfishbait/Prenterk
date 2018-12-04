@@ -107,7 +107,7 @@ function onHover() {
       return `
             z-index: 4;
             opacity: 1;
-            transform: scale(1.2);
+            transform: scale(1.4);
             border: 5px solid lightgray;
       `;
 }

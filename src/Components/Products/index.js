@@ -41,7 +41,7 @@ const Container = styled.div`
       background-color:#231F20;
       -webkit-clip-path: polygon(0 15%, 100% 0, 100% 85%, 0% 100%);
       clip-path: polygon(0 15%, 100% 0, 100% 85%, 0% 100%);
-      margin-top: -145px;
+      margin-top: -100px;
       margin-bottom: -150px;
 `;
 

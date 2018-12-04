@@ -10,7 +10,7 @@ export default class Index extends Component {
     return (
       <Header>
         <ThemeProvider theme={theme}>
-          <Blackbar myClick={this.props.clicks}/>
+          <Blackbar button={this.props.button} myClick={this.props.clicks}/>
         </ThemeProvider>
         <BigAssPicture/>
       </Header>
@@ -27,7 +27,7 @@ const Header = styled.div`
     flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
-    height: 110vh;
+    height: 120vh;
     width: 100vw;
     background-image: url(${backgroundImage});
     background-size:cover;

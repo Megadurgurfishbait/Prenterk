@@ -33,7 +33,7 @@ export default class ProdExamples extends Component {
 const Container = styled.div`
       display: flex;
       flex: 1 1 70%;
-      height: 100%;
+      height: 80%;
 
 `;
 
