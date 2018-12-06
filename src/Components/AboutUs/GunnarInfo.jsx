@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
-
+import Breakpoints from '../Elements/breakpoints';
 const GunnarInfo = (props) => (
       <Container>
-            <Title> Um Gunnar Óðinn Gunnarsson</Title>
+            <Title> Um Gunnar </Title>
             <TextContainer>
                   <Sides fontSize>
                         <Text>Phasellus quis dui id magna aliquet sollicitudin.</Text>
@@ -25,8 +25,19 @@ const Sides = styled.div`
       height: 100%;
       min-height: 250px;
       width: 50%;
-      font-size: ${props => props.fontSize ? "20px" : "10px"};
-      
+
+      @media (max-width: ${Breakpoints.portrait}px){
+            width: 80%;
+      }
+
+      @media (min-width: ${Breakpoints.desktop}px){
+            font-size: ${props => props.fontSize ? "20px" : "15px"};
+      }
+      font-size: ${props => props.fontSize ? "15px" : "10px"};
+
+      @media (max-width: ${Breakpoints.phone}px){
+            font-size: ${props => props.fontSize ? "12px" : "8px"};
+      }
 `;
 
 const TextContainer = styled.div`
@@ -48,9 +59,26 @@ const Container = styled.div`
       flex: 1 1 60%;
       max-width: 65%;
       color: white;
+
+      @media (max-width: ${Breakpoints.portrait}px){
+            max-width: 90%;
+      }
+
+      @media (max-width: ${Breakpoints.phone}px){
+            max-width: 100%;
+            justify-content: flex-end;
+            margin: 0;
+      }
 `;
 const Title = styled.h1`
-      margin: 1rem 1rem;
+      @media (min-width: ${Breakpoints.desktop}px){
+            font-size: 3rem;
+      }
+      @media (max-width: ${Breakpoints.phone}px){
+            margin: 0;
+            letter-spacing: 0px;
+
+      }
       font-size: 2rem;
       text-align: center;
       letter-spacing: 4px;

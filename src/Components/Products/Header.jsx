@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components'
-
+import Breakpoints from '../Elements/breakpoints';
 
 const Header = () => (
       <Container>
@@ -13,13 +13,27 @@ const Container = styled.div`
       height: 40px;
       justify-content: center;
       align-items: center;
-      margin-top: 10%;
+      margin-top: 15%;
+
+      @media (max-width: ${Breakpoints.portrait}px){
+            height: 20px;
+      }
+
+
+       @media (max-width: ${Breakpoints.phone}px){
+            margin-top: 30%;
+      }
 `;
 
 const H1 = styled.h1`
       font-size: 4rem;
       color: white;
       font-weight: 100;
+
+      @media (max-width: ${Breakpoints.portrait}px){
+            font-size: 2rem;
+      }
 `;
+
 
 export default Header;

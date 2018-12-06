@@ -4,13 +4,12 @@ import backgroundImage from '../../Assets/Header/imageedit_1_3949203845.jpg';
 import Blackbar from './Blackbar';
 import BigAssPicture from './BigAssPicture';
 
-
 export default class Index extends Component {
   render() {
     return (
       <Header>
         <ThemeProvider theme={theme}>
-          <Blackbar button={this.props.button} myClick={this.props.clicks}/>
+          <Blackbar button={this.props.button} myClick={this.props.clicks} drawerClickHandler={this.props.drawerClickHandler}/>
         </ThemeProvider>
         <BigAssPicture/>
       </Header>
@@ -28,6 +27,7 @@ const Header = styled.div`
     flex-direction: column;
     align-items: center;
     height: 120vh;
+    min-height: 600px;
     width: 100vw;
     background-image: url(${backgroundImage});
     background-size:cover;

@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import {Spring} from 'react-spring';
+import Breakpoints from '../Elements/breakpoints';
 
 const BigAssPicture = () => (
     <BigTitleDiv>
@@ -33,5 +34,9 @@ const BigTitleDiv = styled.div`
     color: ${props => props.theme.main};
     font-weight: 800;
     letter-spacing: 7px;
+
+      @media (max-width: ${Breakpoints.portrait}px){
+            font-size: 3rem;
+      }
   }
 `;

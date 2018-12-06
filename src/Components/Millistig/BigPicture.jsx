@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import styled  from 'styled-components';
-
+import Breakpoints from '../Elements/breakpoints';
 
 
 export default class BigPicture extends Component {
@@ -25,6 +25,14 @@ const Container = styled.div`
     align-items: center;
     flex: 1 1 50%;
     height: 100%;
+
+      @media (max-width: ${Breakpoints.desktop}px){
+            flex: 1 1 60%;
+      }
+
+            @media (max-width: ${Breakpoints.landscape}px){
+            display:none;
+      }
 `;
 
 const Picture = styled.div`
@@ -34,5 +42,13 @@ const Picture = styled.div`
     width: 50%;
     height: 50%;
     margin-top: -80px;
+
+      @media (max-width: ${Breakpoints.desktop}px){
+            width: 60%;
+      }
+
+      @media (max-width: ${Breakpoints.landscape}px){
+            display: none;
+      }
 `;
 

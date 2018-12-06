@@ -1,6 +1,6 @@
 import React, {Component} from 'react';    
 import styled from 'styled-components';
-
+import Breakpoints from '../Elements/breakpoints';
 import Items from './Items';
 
 
@@ -25,33 +25,25 @@ const Container = styled.div`
       height: 70%;
       min-height: 500px;
 
-      & button {
-            padding: 0;
-            text-align: left;
-            color: white;
-            margin: 1rem 1rem;
-            font-size: 1.6rem;
-            height: 40px;
-            width: 65%;
-            background-color: transparent;
-            border: none;
-            border: 1px groove transparent;
-            transition: all .5s;
-            transform: translateX(-20px);
-            text-align: center;
-            white-space: nowrap;
-            &:hover,
-            &:active {
-                  border: 1px groove transparent;
-                  transform: translateX(0px);
-            }
+       @media (max-width: ${Breakpoints.landscape}px){
+             height: 100%;
+             text-align: flex-start;
+      }
 
-            &:focus {
-                  background-color: #272525;
-                  border: 1px groove white;
-                  transform: scale(1.1);
-                  outline: none;
-                  border-radius: 10px;
-            }
+      @media (max-width: ${Breakpoints.portrait}px){
+            flex-flow: nowrap row;
+            min-height: 0px;
+            max-height: 20px;
+            margin-top: 50px;
+            width: 90%;
+      }
+
+      @media (max-width: ${Breakpoints.phone}px){
+            flex-flow: wrap row;
+            min-height: 100%;
+            width: 100%;
+            align-items: stretch;
+            justify-content: space-evenly;
+
       }
 `;

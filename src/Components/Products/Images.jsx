@@ -1,6 +1,8 @@
 import React, {Component, Fragment} from 'react';
 import styled from 'styled-components';
 import posed from 'react-pose';
+import Breakpoints from '../Elements/breakpoints';
+
 
 export default class Images extends Component {
 
@@ -71,6 +73,7 @@ const Try = styled(posed.div({
 
 
 const ImageStyle = styled.img`
+            min-height: 20%;
             display: block;
             max-height: 40%;
             max-width: 100%;
@@ -79,35 +82,64 @@ const ImageStyle = styled.img`
             transition: all  .5s; 
             border: 5px solid transparent;
 
+      @media (max-width: ${Breakpoints.desktop}px){
+                  max-width: 50%;
+                  max-height: 45%;
+            }
+
+
+
             &:nth-child(3){
                   ${position("15%", "40%", 1, 0.6)}
                   /* Function for duplicate code */
+                  
+                  @media (max-width: ${Breakpoints.landscape}px){
+                        ${position("15%", "30%", 1, 0.6)}
+                  }
+                  
                   &:hover { 
-                        ${onHover} }
+                        ${onHover(1.2)}
+
+                        @media (min-width: ${Breakpoints.landscape}px){
+                              ${onHover(1.1)}
+                        }
+                  }
             }
 
             &:nth-child(2){
                   ${position("30%", "30%", 2, 0.8)}  
                   /* Function for duplicate code */
+                  @media (max-width: ${Breakpoints.landscape}px){
+                        ${position("30%", "20%", 2, 0.8)}
+                  }
                   &:hover {
-                        ${onHover}}
+                        ${onHover(1.2)}
+                        @media (max-width: ${Breakpoints.landscape}px){
+                        ${onHover(1.1)}
+                  }}
             }
 
             &:first-child {
                   ${position("10%", "20%", 3, 1)}
                   /* Function for duplicate code */
+                  @media (max-width: ${Breakpoints.landscape}px){
+                        ${position("10%", "10%", 3, 1)}
+                  }
                   &:hover {
-                        ${onHover}}
+                        ${onHover(1.2)}
+                        @media (max-width: ${Breakpoints.landscape}px){
+                        ${onHover(1.1)}
+                  }}
             }  
 `;
 
 
 /************** Assist GSS Functions ************** */
-function onHover() {
+function onHover(scale) {
       return `
             z-index: 4;
             opacity: 1;
-            transform: scale(1.4);
+            transform: scale(${scale});
             border: 5px solid lightgray;
       `;
 }

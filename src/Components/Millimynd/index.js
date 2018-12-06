@@ -11,6 +11,7 @@ const Sicko = styled.div`
       display: block;
       height: 75vh;
       min-height: 600px;
+      max-height: 700px;
       width: 100vw;
       background-image: url(${Picture});
       background-attachment: fixed;

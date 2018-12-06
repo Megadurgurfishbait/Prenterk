@@ -10,7 +10,7 @@ export default class Maps extends React.Component {
         this.state = {
           lat: 63.9295,
           lng: -21.01765,
-          zoom: 15
+          zoom: 13.5
         }
       }
     
@@ -32,20 +32,3 @@ export default class Maps extends React.Component {
         );
       }
     }
-     
-
-const MyMap = styled.div`
-      display: block;
-      background-image: url(${Image});
-      background-size: contain;
-      background-repeat: no-repeat;
-      height: 100%;
-      min-height: 500px;
-      width: 100%;
-
-
-      &:hover {
-            transform: scale(1.3);
-
-      }
-`;

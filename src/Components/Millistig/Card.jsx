@@ -6,7 +6,7 @@ import Image3 from '../../Assets/Millistig/17000226941_8e7f2ce7cc_k.jpg';
 import Image4 from '../../Assets/Millistig/Digital-Design-720x392.jpg';
 import Image5 from '../../Assets/Millistig/tunnan-skirteini.jpg';
 import Image6 from '../../Assets/Millistig/Umsl_g_.jpg';
-
+import Breakpoints from '../Elements/breakpoints';
 
 
 export default class Card extends Component {
@@ -34,14 +34,23 @@ export default class Card extends Component {
   }
 
   const CardImage = styled.div`
-    height: 100px;
+    height: 90px;
     flex: 1 1 30%;
     margin: 3px 8px;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     border: 1px solid transparent;
-      transition: all .3s ease;
+   transition: all .3s ease;
+      z-index: 50000;
+       @media (max-width: ${Breakpoints.landscape}px){
+            height: 110px;
+      }
+
+      @media (max-width: ${Breakpoints.phone}px){
+            height: 90px;
+            
+      }
       
     &:hover {
 
@@ -49,6 +58,11 @@ export default class Card extends Component {
           -webkit-box-shadow: 2px 4px 13px 1px rgba(0,0,0,0.75);
             -moz-box-shadow: 2px 4px 13px 1px rgba(0,0,0,0.75);
             box-shadow: 2px 4px 13px 1px rgba(0,0,0,0.75);
+
+      @media (max-width: ${Breakpoints.portrait}px){
+            transform: scale(1.02);   
+      }
+
     }
   `;
 

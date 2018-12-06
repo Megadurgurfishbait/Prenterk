@@ -3,6 +3,8 @@ import styled  from 'styled-components';
 import BigPicture from './BigPicture';
 import LeftSideContainer from './Leftsidecontainer';
 import BigPic from '../../Assets/Millistig/1-scs-printer-picture.jpg';
+import Breakpoints from '../Elements/breakpoints';
+
 
 export default class Background extends Component {
       
@@ -37,7 +39,15 @@ const BackgroundContainer = styled.div`
     position: relative;
     margin-top: -150px;
 
+      @media (max-width: ${Breakpoints.portrait}px){
 
+              clip-path: polygon(0 16%, 100% 0, 100% 85%, 0% 100%);
+      }   
+
+      @media (max-width: ${Breakpoints.phone}px){
+            height: 700px;
+            clip-path: polygon(0 11%, 100% 0, 100% 85%, 0% 100%);
+      }   
 `;
 
 

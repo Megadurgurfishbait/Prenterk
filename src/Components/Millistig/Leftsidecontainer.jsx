@@ -2,6 +2,7 @@ import React, { Fragment, Component } from "react";
 import styled from "styled-components";
 import SixPictures from "./Sixpicture";
 import { Spring } from "react-spring";
+import Breakpoints from '../Elements/breakpoints';
 
 export default class LeftSideContainer extends Component {
   state = {
@@ -34,32 +35,58 @@ const Container = styled.div`
   height: 100%;
   margin: 1rem 0rem;
   margin-left: 5%;
+ overflow: hidden;
 
+      @media (max-width: ${Breakpoints.portrait}px){
+            margin: 1rem 0rem;
+
+      }
 `;
 
 const TextSixPictures = styled.div`
   display: flex;
   flex: 1 1 50%;
-
   flex-direction: column;
   justify-content: flex-start;
   height: 70%;
+
+  @media (max-width: ${Breakpoints.landscape}px){
+            flex: 1 1 100%;
+            height: 70%;
+      }
 `;
 
 const ItemHeading = styled.h1`
-  position: relative;
-  padding: 1rem 3rem;
-
-  padding-top: 50px;
+  padding: 0rem 3rem;
+  padding-top: 10px;
   margin: 0;
-  height: 20%;
   width: 100%;
   text-align: left;
+  font-size: 1.7rem;
+
+    @media (max-width: ${Breakpoints.landscape}px){
+            padding: 0rem;
+            font-size: 1.7rem;
+            text-align: center;
+      }
 `;
 
 const ItemText = styled.p`
   text-align: left;
-  width: 100%;
+  width:90%;
   margin: 0;
-  padding: 1rem 3rem;
+  padding: .5rem 2rem;
+
+      @media (max-width: ${Breakpoints.landscape}px){
+            padding: .5rem .5rem;
+            text-align: center;
+      }
+
+      @media (max-width: ${Breakpoints.portrait}px){
+            width: 90%;
+      }
+
+      @media (max-width: ${Breakpoints.phone}px){
+            text-align: left;
+      }
 `;
