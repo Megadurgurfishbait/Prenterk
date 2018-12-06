@@ -19,6 +19,10 @@ const Container = styled.div`
             height: 20px;
       }
 
+      @media (min-width: ${Breakpoints.desktop}px){
+            margin-top: 7%;
+      }
+
 
        @media (max-width: ${Breakpoints.phone}px){
             margin-top: 30%;
