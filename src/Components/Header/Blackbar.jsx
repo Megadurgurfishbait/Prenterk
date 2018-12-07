@@ -39,7 +39,7 @@ const BlackHeader = styled.div`
     display: flex;
     position: fixed;
     background-color: ${props => props.theme.main};
-    height: 5rem;
+    height: 85px;
     width: 100vw;
     z-index: 500;
 `;

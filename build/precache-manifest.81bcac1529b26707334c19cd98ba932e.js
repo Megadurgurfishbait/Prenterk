@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/static/media/nafnspjald_2.9337f73b.JPG"
   },
   {
-    "revision": "32000655d411cc97aa62",
+    "revision": "57ff9e558438aed95be6",
     "url": "/static/css/main.c40db505.chunk.css"
   },
   {
@@ -52,8 +52,8 @@ self.__precacheManifest = [
     "url": "/static/media/nafnspjald_1.b74ddef5.JPG"
   },
   {
-    "revision": "32000655d411cc97aa62",
-    "url": "/static/js/main.32000655.chunk.js"
+    "revision": "57ff9e558438aed95be6",
+    "url": "/static/js/main.57ff9e55.chunk.js"
   },
   {
     "revision": "b2e5939e8c42ceba9d48c83acbf540cf",
@@ -100,7 +100,7 @@ self.__precacheManifest = [
     "url": "/static/media/location.dd69d9d6.JPG"
   },
   {
-    "revision": "485b6482d38f0dec282d632426c68c2e",
+    "revision": "c7acd6e651a88f1eac17212303fab357",
     "url": "/index.html"
   }
 ];
