@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Header from "./Components/Header";
 import "./App.css";
-import Background from "./Components/Millistig/Background";
+import Background from "./Components/Millistig/Leftsidecontainer";
 import Products from "./Components/Products";
 import Millimynd from "./Components/Millimynd";
 import AboutUs from "./Components/AboutUs";
@@ -37,7 +37,7 @@ class App extends Component {
     _scrollToDiv = (e) => {
           switch(e.target.id) {
                 case "vorur":  
-                        scrollToComponent(this.Products, { offset: -20, align: 'top', duration: 1500})
+                        scrollToComponent(this.Products, { offset: -80, align: 'top', duration: 1500})
                         break;
                 default: 
                         scrollToComponent(this.AboutUs, { offset: 0, align: 'top', duration: 1500});

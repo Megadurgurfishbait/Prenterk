@@ -39,23 +39,15 @@ const Container = styled.div`
       flex-direction: column;
       align-items: center;
       min-height: 80vh;
-      height: 100%;
+      height: 100vh;
       width: 100vw;
       background-color:#231F20;
-      -webkit-clip-path: polygon(0 15%, 100% 0, 100% 90%, 0% 100%);
-      clip-path: polygon(0 15%, 100% 0, 100% 90%, 0% 100%);
-      margin-top: -100px;
-      margin-bottom: -150px;
 
             @media (max-width: ${Breakpoints.portrait}px){
-                  -webkit-clip-path: polygon(0 21%,100% 0,100% 80%,0% 100%);
-                  clip-path: polygon(0 14%,100% 0,100% 80%,0% 100%);
                   height: 120vh;
       }
 
             @media (max-width: ${Breakpoints.phone}px){
-                  -webkit-clip-path: polygon(0 10%,100% 0,100% 91%,0% 100%);
-                  clip-path: polygon(0 10%,100% 0,100% 91%,0% 100%);
                   height: 100vh;
       }
 `;

@@ -22,14 +22,7 @@ const Container = styled.div`
       width: 100vw;
       background-color: #231F20;
       margin-top: -300px;
-      -webkit-clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
-      clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);
-      position: relative;
 
-            @media (max-width: ${Breakpoints.phone}px){
-                  -webkit-clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
-                  clip-path: polygon(0 6%, 100% 0, 100% 100%, 0% 100%);
-            }
 `;
 
 

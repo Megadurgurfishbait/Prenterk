@@ -19,11 +19,11 @@ export default class ListItems extends Component {
 const Container = styled.div`
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: flex-start;
       align-items: center;
       flex: 1 1 20%;
       height: 70%;
-      min-height: 500px;
+      min-height: 400px;
 
        @media (max-width: ${Breakpoints.landscape}px){
              height: 100%;
