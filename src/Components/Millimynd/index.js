@@ -23,7 +23,16 @@ const Sicko = styled.div`
       z-index: -4;
       
       @media (max-width: 600px){
-            background-attachment: initial;
+            display: table;
+            height: 100%;
+            width: 100%;
+            position: relative;
+            color: #fff;
+            background: url(${Picture}) no-repeat center center fixed; 
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
       }
 `;
 
