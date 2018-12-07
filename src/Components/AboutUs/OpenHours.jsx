@@ -6,6 +6,7 @@ const OpenHours = () => (
       <Container>
             <Title>Upplýsingar</Title>
             <Text>+354 898 3877</Text>
+            <Text>pvs@pvs.is</Text>
             <Text>Gagnheiði 43, 800 Selfossi</Text>
             <Text>Mán - fös frá 08:00 - 17:00</Text>
       </Container>
@@ -24,7 +25,6 @@ const Container = styled.div`
       color: white;    
 
       @media (max-width: ${Breakpoints.landscape}px){
-            
             margin: 1rem .6rem 1.5rem .6rem;
 
       }

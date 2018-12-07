@@ -38,8 +38,7 @@ const Container = styled.div`
       display: flex;
       flex-direction: column;
       align-items: center;
-      min-height: 80vh;
-      height: 100vh;
+
       width: 100vw;
       background-color:#231F20;
 
