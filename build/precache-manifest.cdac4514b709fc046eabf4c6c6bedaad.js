@@ -1,15 +1,15 @@
 self.__precacheManifest = [
   {
-    "revision": "9337f73b67c1ff4cb8c3a67a7f8a5e92",
-    "url": "/static/media/nafnspjald_2.9337f73b.JPG"
+    "revision": "b74ddef5cd5a78076cc050a6b4360d8b",
+    "url": "/static/media/nafnspjald_1.b74ddef5.JPG"
   },
   {
-    "revision": "57ff9e558438aed95be6",
+    "revision": "c3b95f52747c1c79b59f",
     "url": "/static/css/main.c40db505.chunk.css"
   },
   {
-    "revision": "2ce5784219901bbd9009",
-    "url": "/static/js/1.2ce57842.chunk.js"
+    "revision": "d3a6f8483f5d11c2c369",
+    "url": "/static/js/1.d3a6f848.chunk.js"
   },
   {
     "revision": "229c360febb4351a89df",
@@ -48,12 +48,12 @@ self.__precacheManifest = [
     "url": "/static/media/Umsl_g_.b32f3d9a.jpg"
   },
   {
-    "revision": "b74ddef5cd5a78076cc050a6b4360d8b",
-    "url": "/static/media/nafnspjald_1.b74ddef5.JPG"
+    "revision": "c3b95f52747c1c79b59f",
+    "url": "/static/js/main.c3b95f52.chunk.js"
   },
   {
-    "revision": "57ff9e558438aed95be6",
-    "url": "/static/js/main.57ff9e55.chunk.js"
+    "revision": "9337f73b67c1ff4cb8c3a67a7f8a5e92",
+    "url": "/static/media/nafnspjald_2.9337f73b.JPG"
   },
   {
     "revision": "b2e5939e8c42ceba9d48c83acbf540cf",
@@ -96,11 +96,7 @@ self.__precacheManifest = [
     "url": "/static/media/logo.8c6ea4b4.jpg"
   },
   {
-    "revision": "dd69d9d6927cc2481486d0dc28d0954f",
-    "url": "/static/media/location.dd69d9d6.JPG"
-  },
-  {
-    "revision": "c7acd6e651a88f1eac17212303fab357",
+    "revision": "aaebe7c8aa74e902775c60f72bd7a10d",
     "url": "/index.html"
   }
 ];
