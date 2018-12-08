@@ -2,13 +2,12 @@ import React from 'react';
 import styled from 'styled-components'
 import Picture from '../Elements/Logo';
 
-const Title = (props) => (
-
+const Title = (props) => 
       <Container>
             <Picture center />
             <H1>Hafa samband</H1>
       </Container>
-)
+
 export default Title;
 
 const Container = styled.div`
@@ -29,14 +28,5 @@ const H1 = styled.h1`
       align-items: center;
       text-align: center;
       font-size: 3rem;
-`;
-
-const Close = styled.span`
-      display: flex;
-      color: white;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      width: 20%;
 `;
 

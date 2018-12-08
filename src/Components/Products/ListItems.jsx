@@ -1,19 +1,16 @@
-import React, {Component} from 'react';    
+import React from 'react';    
 import styled from 'styled-components';
 import Breakpoints from '../Elements/breakpoints';
 import Items from './Items';
 
 
-export default class ListItems extends Component {
+const ListItems = (props) => 
+      <Container>
+            <Items myClick={props.clicks}/>
+      </Container>
 
-      render() {
-            return (
-                  <Container>
-                        <Items myClick={this.props.clicks}/>
-                  </Container>
-            )
-      }
-}
+
+export default ListItems;
 
 
 const Container = styled.div`

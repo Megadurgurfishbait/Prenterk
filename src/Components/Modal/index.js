@@ -1,19 +1,17 @@
-import React, { Component } from "react";
+import React from "react";
 import styled from "styled-components";
 import Title from "./Title";
 import Inputs from "./Inputs";
 import { keyFrameExampleOne } from '../../Assets/Keyframes';
 
-export default class Modal extends Component {
-  render() {
-    return (
+const index = (props) => 
       <Container>
-        <Title clicks={this.props.clicks} />
-        <Inputs clicks ={this.props.clicks}/>
+        <Title clicks={props.clicks} />
+        <Inputs clicks ={props.clicks}/>
       </Container>
-    );
-  }
-}
+
+
+export default index;
 
 const Container = styled.div`
   z-index: 4000000;

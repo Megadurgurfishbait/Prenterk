@@ -3,20 +3,16 @@ import styled from "styled-components";
 import Breakpoints from '../Elements/breakpoints';
 import CardRender from "./CardRender";
 
-export default class LeftSideContainer extends Component {
-      
-
-  render() {
-    return (
+const LeftSideContainer = () => 
       <Container>
         <TextSixPictures>
           <ItemHeading>Við framkvæmum </ItemHeading>
           <CardRender />
         </TextSixPictures>
       </Container>
-    );
-  }
-}
+ 
+
+export default LeftSideContainer;
 
 const Container = styled.div`
   display: flex;
@@ -25,10 +21,8 @@ const Container = styled.div`
   flex: 1 1 100%;
   height: 100%;
   overflow: hidden;
-
       @media (max-width: ${Breakpoints.portrait}px){
             margin: 1rem 0rem;
-
       }
 `;
 
@@ -37,7 +31,6 @@ const TextSixPictures = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   height: 70%;
-
   @media (max-width: ${Breakpoints.landscape}px){
             flex: 1 1 100%;
             height: 70%;
@@ -45,7 +38,6 @@ const TextSixPictures = styled.div`
 `;
 
 const ItemHeading = styled.h1`
-
   margin: 1rem 0rem;
   width: 100%;
   font-size: 4rem;

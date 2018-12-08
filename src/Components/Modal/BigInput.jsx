@@ -8,7 +8,6 @@ const BigInput = (props) => (
       </Container>
 )
 
-
 export default BigInput;
 
 const Container = styled.div`

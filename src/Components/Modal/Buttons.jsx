@@ -1,12 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Buttons = (props) => (
+const Buttons = (props) => 
       <Container>
             <Button onClick={props.sendItems} >Senda</Button>
             <Button onClick={props.clicks} danger>Hætta við</Button>
       </Container>
-)
+
 
 export default Buttons;
 

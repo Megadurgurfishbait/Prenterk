@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component} from 'react';
 import styled from 'styled-components';
 import Header from './Header';
 import ListItems from './ListItems';
@@ -38,12 +38,15 @@ const Container = styled.div`
       display: flex;
       flex-direction: column;
       align-items: center;
-
       width: 100vw;
       background-color:#231F20;
 
-            @media (max-width: ${Breakpoints.portrait}px){
-                  height: 120vh;
+      @media (min-width: ${Breakpoints.landscape}px){
+            height: 100vh;
+      }
+
+       @media (max-width: ${Breakpoints.portrait}px){
+            height: 120vh;
       }
 
             @media (max-width: ${Breakpoints.phone}px){

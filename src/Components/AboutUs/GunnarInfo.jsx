@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Breakpoints from '../Elements/breakpoints';
+
 const GunnarInfo = (props) => (
       <Container>
             <Title> Um Gunnar </Title>
@@ -25,16 +26,14 @@ const Sides = styled.div`
       height: 100%;
       min-height: 250px;
       width: 50%;
+      font-size: ${props => props.fontSize ? "15px" : "10px"};
 
       @media (max-width: ${Breakpoints.portrait}px){
             width: 80%;
       }
-
       @media (min-width: ${Breakpoints.desktop}px){
             font-size: ${props => props.fontSize ? "20px" : "15px"};
       }
-      font-size: ${props => props.fontSize ? "15px" : "10px"};
-
       @media (max-width: ${Breakpoints.phone}px){
             font-size: ${props => props.fontSize ? "12px" : "8px"};
       }
@@ -71,18 +70,18 @@ const Container = styled.div`
       }
 `;
 const Title = styled.h1`
+      font-size: 2rem;
+      text-align: center;
+      letter-spacing: 4px;
+      text-shadow: 1px 1px gray;
+
       @media (min-width: ${Breakpoints.desktop}px){
             font-size: 3rem;
       }
       @media (max-width: ${Breakpoints.phone}px){
             margin: 0;
             letter-spacing: 0px;
-
       }
-      font-size: 2rem;
-      text-align: center;
-      letter-spacing: 4px;
-      text-shadow: 1px 1px gray;
 `;
 const Text = styled.p`
       margin: .5rem .5rem;

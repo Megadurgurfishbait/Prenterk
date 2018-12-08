@@ -72,7 +72,7 @@ const MidTextImage = styled.div`
     height: 100%;
     width: 100%;
     margin-top: -2px;
-    background-image: url(${Logo});
+    background-image: url(${Logo}) ;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -91,7 +91,6 @@ const RightText = styled.ul`
     color: white;
     background-color: ${props => props.theme.main};
 
-
       @media (max-width: ${Breakpoints.portrait}px){
             display: none;
       }
@@ -101,7 +100,6 @@ const RightText = styled.ul`
 const Button = styled.button`
       border: none;
       height: 60%;
-      
       background-color: ${props => props.theme.main};
       color: white;
       font-size: 1.3rem;

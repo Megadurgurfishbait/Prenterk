@@ -54,7 +54,6 @@ export default class Inputs extends Component {
         <Input change={this.getItems} name="Simanumer" />
         <Input change={this.getItems} name="Titill" />
         <BigInput change={this.getItems} name="Texti" />
-
         <Buttons sendItems={this.sendItems} clicks={this.props.clicks}/>
       </Container>
     );
