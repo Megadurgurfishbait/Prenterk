@@ -6,28 +6,33 @@ import GunnarPicture from "./GunnarPicture";
 import GunnarInfo from "./GunnarInfo";
 import Breakpoints from "../Elements/breakpoints";
 
-const Index = () => (
-  <FakeContainer>
-    <Top>
-      <GunnarInfo />
-      <GunnarPicture />
-      <FakeNews />
-    </Top>
-    <Top bigger>
-      <Map />
-      <OpenHours />
-    </Top>
-  </FakeContainer>
-);
+export default class AboutUs extends React.PureComponent {
+  render() {
+    return (
+      <FakeContainer>
+        <Top>
+          <GunnarInfo />
+          <GunnarPicture />
+          <FakeNews />
+        </Top>
+        <Top bigger>
+          <Map />
+          <OpenHours />
+        </Top>
+      </FakeContainer>
+    );
+  }
+}
 
 const FakeContainer = styled.div`
-display: flex;
-justify-content: center;
-align-items: center;
-height: 100%;
-width: 100vw;
-background-color: #231F20;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100vw;
+  background-color: #231f20;
   flex-flow: row wrap;
+  padding-top: 100px;
 `;
 
 const FakeNews = styled.div`
@@ -51,7 +56,6 @@ const FakeNews = styled.div`
 `;
 
 const Top = styled.div`
-
   position: relative;
   max-width: 60vw;
   display: flex;
@@ -66,7 +70,6 @@ const Top = styled.div`
   margin: 1rem;
   padding: 0.5rem;
   background-color: #383536;
-  margin-top: 100px;
 
   @media (max-width: ${Breakpoints.landscape}px) {
     max-width: 70vw;
@@ -80,10 +83,8 @@ const Top = styled.div`
   }
 
   @media (max-width: ${Breakpoints.phone}px) {
-    max-width: 100vw;
+    max-width: 90vw;
     margin: 1rem 0;
     padding: 0;
   }
 `;
-
-export default Index;

@@ -4,12 +4,12 @@ self.__precacheManifest = [
     "url": "/static/media/nafnspjald_1.f82c19f2.JPG"
   },
   {
-    "revision": "c15240c4acffc87199a7",
+    "revision": "2826bc1902f2fc562c8b",
     "url": "/static/css/main.c40db505.chunk.css"
   },
   {
-    "revision": "6858c8cfc1f8914db6bc",
-    "url": "/static/js/1.6858c8cf.chunk.js"
+    "revision": "1f1d7375a8a0c441b347",
+    "url": "/static/js/1.1f1d7375.chunk.js"
   },
   {
     "revision": "229c360febb4351a89df",
@@ -48,8 +48,8 @@ self.__precacheManifest = [
     "url": "/static/media/Umsl_g_.4747bd96.jpg"
   },
   {
-    "revision": "c15240c4acffc87199a7",
-    "url": "/static/js/main.c15240c4.chunk.js"
+    "revision": "2826bc1902f2fc562c8b",
+    "url": "/static/js/main.2826bc19.chunk.js"
   },
   {
     "revision": "ab31e731b6d6338537f9a9bfbe54f92b",
@@ -92,7 +92,7 @@ self.__precacheManifest = [
     "url": "/static/media/prufael.3ba36c4b.JPG"
   },
   {
-    "revision": "a45e1c3b01f2ee15d8ed2a96b24ea588",
+    "revision": "643821d71057d61dc4d5f00ce90aae24",
     "url": "/index.html"
   }
 ];

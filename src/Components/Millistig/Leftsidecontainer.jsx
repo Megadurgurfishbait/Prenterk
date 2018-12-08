@@ -43,6 +43,7 @@ const ItemHeading = styled.h1`
   font-size: 4rem;
   text-align: center;
   padding: 0rem;
+  letter-spacing: 5px;
     @media (max-width: ${Breakpoints.landscape}px){
             font-size: 1.7rem;
       }
