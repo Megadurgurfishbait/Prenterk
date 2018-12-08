@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "f82c19f2e02b6f669bed2efe856cd4ac",
-    "url": "/static/media/nafnspjald_1.f82c19f2.JPG"
+    "revision": "e2614341111d5529b64ddc12b113042a",
+    "url": "/static/media/nafnspjald_1.e2614341.JPG"
   },
   {
-    "revision": "6851813b9cdb7f0097d8",
-    "url": "/static/js/main.6851813b.chunk.js"
+    "revision": "1bd60da0adc24734d429",
+    "url": "/static/js/main.1bd60da0.chunk.js"
   },
   {
     "revision": "229c360febb4351a89df",
@@ -20,8 +20,8 @@ self.__precacheManifest = [
     "url": "/static/media/Capture.acc84575.JPG"
   },
   {
-    "revision": "ca1e12b91aaa87a94a4afaf5d8d86397",
-    "url": "/static/media/8806400_orig.ca1e12b9.jpg"
+    "revision": "43b67039bc9832c838c686dfdb204480",
+    "url": "/static/media/8806400_orig.43b67039.jpg"
   },
   {
     "revision": "43b297ae9623ccf376d31c2f6837c633",
@@ -40,8 +40,8 @@ self.__precacheManifest = [
     "url": "/static/media/tunnan-skirteini.a2e2252c.jpg"
   },
   {
-    "revision": "4747bd96ae392b0c439a2555bea5339f",
-    "url": "/static/media/Umsl_g_.4747bd96.jpg"
+    "revision": "3677260a53944d2db29514aaf78ba083",
+    "url": "/static/media/Umsl_g_.3677260a.jpg"
   },
   {
     "revision": "3ba36c4bad393635cf016b4c655610e4",
@@ -88,7 +88,7 @@ self.__precacheManifest = [
     "url": "/static/js/1.67d803cd.chunk.js"
   },
   {
-    "revision": "b02411450fa3692025f809e755f110cd",
+    "revision": "575348dccc5d05ec3d212b6d4ef3e1eb",
     "url": "/index.html"
   }
 ];
