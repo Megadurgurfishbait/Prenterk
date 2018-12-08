@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import Header from "./Components/Header";
-import "./App.css";
 import Background from "./Components/Millistig/Leftsidecontainer";
 import Products from "./Components/Products";
 import Millimynd from "./Components/Millimynd";
@@ -12,10 +11,10 @@ import styled, { createGlobalStyle } from "styled-components";
 
 const GlobalStyles = createGlobalStyle`
   body {
-    @import url('https://fonts.googleapis.com/css?family=Notable');
+    margin: 0;
     font-family: 'Lato', sans-serif !important;
   }
-`
+`;
 
 class App extends Component {
   constructor(props) {
@@ -55,6 +54,7 @@ class App extends Component {
   render() {
     return (
       <AppDiv>
+      <GlobalStyles/>
         <Header clicks={this.handleOnClick} button={this._scrollToDiv} drawerClickHandler={this.drawerToggleClickHandler} />
         <Background />
         <Products ref={(section) => { this.Products = section; }} />
@@ -75,7 +75,8 @@ export default App;
 
 
 const AppDiv = styled.div`
-
+  margin: 0;
+  padding: 0;
   text-align: center;
   height: 100%;
   width: 100%;
