@@ -2,7 +2,7 @@
 const express = require('express');
 
 const path = require('path');
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 8000;
 const bodyParser = require('body-parser');
 var compression = require('compression')
 const cors = require('cors');
