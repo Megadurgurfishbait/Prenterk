@@ -3,10 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
     "compression": "^1.7.3",
     "express": "^4.16.4",
     "express-favicon": "^2.0.1",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "http": "0.0.0",
+    "nodemailer": "^4.6.8"
   },
   "scripts": {
     "deploy": "pm2 start ./server.sh --name yourAppName",
