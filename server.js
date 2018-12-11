@@ -1,8 +1,7 @@
 //server.js
 const express = require('express');
-
 const path = require('path');
-const port = process.env.PORT || 8000;
+const port = process.env.PORT || 5000;
 const bodyParser = require('body-parser');
 var compression = require('compression')
 const cors = require('cors');

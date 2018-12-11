@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "ab31e731b6d6338537f9a9bfbe54f92b",
-    "url": "/static/media/nafnspjald_2.ab31e731.JPG"
+    "revision": "e2614341111d5529b64ddc12b113042a",
+    "url": "/static/media/nafnspjald_1.e2614341.JPG"
   },
   {
-    "revision": "7471ed02a17c812085af",
-    "url": "/static/js/main.7471ed02.chunk.js"
+    "revision": "26099f607e2beb7b3b68",
+    "url": "/static/js/main.26099f60.chunk.js"
   },
   {
     "revision": "229c360febb4351a89df",
@@ -48,6 +48,10 @@ self.__precacheManifest = [
     "url": "/static/media/prufael.3ba36c4b.JPG"
   },
   {
+    "revision": "ab31e731b6d6338537f9a9bfbe54f92b",
+    "url": "/static/media/nafnspjald_2.ab31e731.JPG"
+  },
+  {
     "revision": "c7e4a57c8eb4bc9f06b78123280e8446",
     "url": "/static/media/nafnspjald_3.c7e4a57c.JPG"
   },
@@ -80,11 +84,11 @@ self.__precacheManifest = [
     "url": "/static/media/hus.22fade42.JPG"
   },
   {
-    "revision": "487fd4102802d0b6509d",
-    "url": "/static/js/1.487fd410.chunk.js"
+    "revision": "cee8e5b7700306ae55bb",
+    "url": "/static/js/1.cee8e5b7.chunk.js"
   },
   {
-    "revision": "338dc9322843142fcc354c8fc9adae2b",
+    "revision": "878ffebb29eb80d7a0931a172b258489",
     "url": "/index.html"
   }
 ];
