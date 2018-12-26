@@ -4,8 +4,8 @@ self.__precacheManifest = [
     "url": "/static/media/nafnspjald_1.e2614341.JPG"
   },
   {
-    "revision": "26099f607e2beb7b3b68",
-    "url": "/static/js/main.26099f60.chunk.js"
+    "revision": "e9d7bde7d9fa4547cbf8",
+    "url": "/static/js/main.e9d7bde7.chunk.js"
   },
   {
     "revision": "229c360febb4351a89df",
@@ -84,11 +84,11 @@ self.__precacheManifest = [
     "url": "/static/media/hus.22fade42.JPG"
   },
   {
-    "revision": "cee8e5b7700306ae55bb",
-    "url": "/static/js/1.cee8e5b7.chunk.js"
+    "revision": "1b10d3c6a36dafe0fc81",
+    "url": "/static/js/1.1b10d3c6.chunk.js"
   },
   {
-    "revision": "878ffebb29eb80d7a0931a172b258489",
+    "revision": "6945008549937a7c5e82b329019c3f72",
     "url": "/index.html"
   }
 ];
