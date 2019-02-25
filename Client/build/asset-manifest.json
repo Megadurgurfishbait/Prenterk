@@ -1,11 +1,10 @@
 {
-  "main.js": "/static/js/main.a17b50ed.chunk.js",
-  "main.js.map": "/static/js/main.a17b50ed.chunk.js.map",
-  "static/js/1.37eeb226.chunk.js": "/static/js/1.37eeb226.chunk.js",
-  "static/js/1.37eeb226.chunk.js.map": "/static/js/1.37eeb226.chunk.js.map",
+  "main.js": "/static/js/main.a2b46ee4.chunk.js",
+  "main.js.map": "/static/js/main.a2b46ee4.chunk.js.map",
+  "static/js/1.e549ed4e.chunk.js": "/static/js/1.e549ed4e.chunk.js",
+  "static/js/1.e549ed4e.chunk.js.map": "/static/js/1.e549ed4e.chunk.js.map",
   "runtime~main.js": "/static/js/runtime~main.229c360f.js",
   "runtime~main.js.map": "/static/js/runtime~main.229c360f.js.map",
-  "static/media/004-news.svg": "/static/media/004-news.8c9c7dbb.svg",
   "static/media/BigPic2.jpg": "/static/media/BigPic2.48b5a7c4.jpg",
   "static/media/Dots.png": "/static/media/Dots.f222bc18.png",
   "static/media/jolakort_1.JPG": "/static/media/jolakort_1.9b6e6679.JPG",
@@ -18,6 +17,7 @@
   "static/media/nafnspjald_2.JPG": "/static/media/nafnspjald_2.ab31e731.JPG",
   "static/media/nafnspjald_3.JPG": "/static/media/nafnspjald_3.c7e4a57c.JPG",
   "static/media/egnobg.png": "/static/media/egnobg.1e804999.png",
+  "static/media/004-news.svg": "/static/media/004-news.8c9c7dbb.svg",
   "static/media/005-pass.svg": "/static/media/005-pass.eec5ac72.svg",
   "static/media/002-calendar.svg": "/static/media/002-calendar.a4b07a41.svg",
   "static/media/003-bookmark.svg": "/static/media/003-bookmark.1b6a6a40.svg",
@@ -27,6 +27,6 @@
   "static/media/011-fax.svg": "/static/media/011-fax.1367e7d4.svg",
   "static/media/010-print.svg": "/static/media/010-print.3928e659.svg",
   "index.html": "/index.html",
-  "precache-manifest.7deebb28e130268be95ef60d832c2ac1.js": "/precache-manifest.7deebb28e130268be95ef60d832c2ac1.js",
+  "precache-manifest.9215e9dae1379246d5df4447bcb51301.js": "/precache-manifest.9215e9dae1379246d5df4447bcb51301.js",
   "service-worker.js": "/service-worker.js"
 }

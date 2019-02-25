@@ -1,19 +1,15 @@
 self.__precacheManifest = [
   {
-    "revision": "a17b50eda3ca5951f531",
-    "url": "/static/js/main.a17b50ed.chunk.js"
+    "revision": "a2b46ee48074bf9f2cbd",
+    "url": "/static/js/main.a2b46ee4.chunk.js"
   },
   {
-    "revision": "37eeb22690072b0f3e13",
-    "url": "/static/js/1.37eeb226.chunk.js"
+    "revision": "e549ed4e080434312b0b",
+    "url": "/static/js/1.e549ed4e.chunk.js"
   },
   {
     "revision": "229c360febb4351a89df",
     "url": "/static/js/runtime~main.229c360f.js"
-  },
-  {
-    "revision": "8c9c7dbb60862ba6eb127136f7b16953",
-    "url": "/static/media/004-news.8c9c7dbb.svg"
   },
   {
     "revision": "48b5a7c42b84669a22118fee325ceb00",
@@ -64,6 +60,10 @@ self.__precacheManifest = [
     "url": "/static/media/egnobg.1e804999.png"
   },
   {
+    "revision": "8c9c7dbb60862ba6eb127136f7b16953",
+    "url": "/static/media/004-news.8c9c7dbb.svg"
+  },
+  {
     "revision": "eec5ac720da1b1ab660962a1b183254b",
     "url": "/static/media/005-pass.eec5ac72.svg"
   },
@@ -96,7 +96,7 @@ self.__precacheManifest = [
     "url": "/static/media/010-print.3928e659.svg"
   },
   {
-    "revision": "cc83c53800b1b8910d4d7a7829feff85",
+    "revision": "69a2e6efd0d35958b823b7141466b09f",
     "url": "/index.html"
   }
 ];
