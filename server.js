@@ -3,7 +3,10 @@ const express = require('express');
 const path = require('path');
 const port = process.env.PORT || 2666;
 const bodyParser = require('body-parser');
-var compression = require('compression')
+var compression = require('compression');
+
+// Simple, no?
+
 const cors = require('cors');
 const app = express();
 app.use(compression())
