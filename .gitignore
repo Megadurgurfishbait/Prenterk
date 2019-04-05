@@ -5,7 +5,7 @@ client/public/*
 client/build/static/css/*.map
 client/build/static/js/*.map
 node_modules
-config
+config.js
 # dependencies
 client/node_modules
 
