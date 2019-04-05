@@ -4,10 +4,11 @@ client/src/*
 client/public/*
 client/build/static/css/*.map
 client/build/static/js/*.map
+node_modules
 
 # dependencies
 client/node_modules
-node_modules
+
 /.pnp
 .pnp.js
 
