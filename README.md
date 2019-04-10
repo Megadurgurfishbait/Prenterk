@@ -13,6 +13,7 @@ Mun öskra á þig hvaða port er í notkun í command tool.
 * GSAP
 * Express
 * Nodemailer
+* Adobe XD
 
 ### Lýsing
 Bjó fyrst til þessa síðu: [Prentverk](http://prentverk.biggaferdir.is/).
