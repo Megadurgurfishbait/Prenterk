@@ -1,3 +1,4 @@
+
 const password = require("../config");
 const nodemailer = require("nodemailer");
 
@@ -28,15 +29,15 @@ exports.sendEmail = function(req, res) {
     const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
-        user: "Prentverkbotti@gmail.com",
-        pass: `${password.pass}`
+        user: "prentverkbotti",
+        pass: "Beggihommi1"
       },
       tls: {
         rejectUnauthorized: false
       }
     });
     let mailOption = {
-      from: "Prentverkbotti@gmail.com",
+      from: "prentverkbotti@gmail.com",
       to: "gss21@hi.is",
       subject: `${req.body.title}`,
       html: htmlEmail
