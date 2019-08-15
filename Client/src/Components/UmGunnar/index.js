@@ -10,13 +10,11 @@ const UmGunnar = () => (
     <Picture>
       <Title>Gunnar Gunnarsson </Title>
       <Paragraph>
-        re-or-less normal distribution of letters, as opposed to using 'Content
-        here, content here', making it look like readable English. Many desktop
-        publishing packages and web page editors now use Lorem Ipsum as their
-        default model text, and a search for 'lorem ipsum' will uncover many web
-        sites still in their infancy. Various versions have evolved over the
-        years, sometimes by accident, sometimes on purpose (injected humour and
-        the like).
+        Gunnar var í Iðnskólanum í Reykjavík 1970-1971, en hóf nám í prentun 15.
+        október 1971 í Prentsmiðju Suðurlands á Selfossi. Hann lauk námi 1975 og
+        tók sveinspróf 1976. Síðan starfaði hann samfleytt hjá Prentsmiðju
+        Suðurlands þar til hann stofnaði sína eigin prentsmiðju. Fyrirtækið er
+        rekið sem einstaklingsfyrirtæki og vinnur Gunnar mestmegnis einn.
       </Paragraph>
     </Picture>
   </Container>
@@ -28,7 +26,7 @@ const Container = styled.div`
   width: 100%;
   background: #fa5757;
   display: flex;
-  min-height: 50vh;
+  min-height: 70vh;
 
   @media (max-width: ${Breakpoints.desktop}px) {
     flex-direction: column;
@@ -36,31 +34,31 @@ const Container = styled.div`
 `;
 
 const Info = styled.div`
-  transform: skew(20deg);
-  background: white;
+
   flex: 1 1 50%;
   margin: -2px;
   margin-left: -150px;
   display: flex;
-  justify-content: center;
-  align-items: flex-end;
+  justify-content: flex-end;
+  align-items: center;
 
   @media (max-width: ${Breakpoints.desktop}px) {
     justify-content: center;
+    align-items: flex-end;
     margin: 0px;
-    transform: skew(0deg);
+    background: white;
     margin-top: -2px;
   }
 `;
 
 const Picture = styled.div`
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
   flex: 1 1 50%;
   color: white;
-  height: 100%;
+  min-height: 100%;
 
   @media (max-width: ${Breakpoints.desktop}px) {
     justify-content: center;
@@ -78,54 +76,48 @@ const Picture = styled.div`
 `;
 
 const Title = styled.h1`
-  font-weight: 400;
+  font-weight: 300;
   width: 50%;
   text-align: left;
-  margin: 4rem 0px;
-  font-size: 4rem;
-  line-height: 0.8;
+  margin: 0.2rem 0px;
+  font-size: 2rem;
+  line-height: 1;
 
   @media (max-width: ${Breakpoints.desktop}px) {
     text-align: center;
   }
   @media (max-width: ${Breakpoints.landscape}px) {
-    font-size: 3rem;
     margin: 1.5rem auto 0.3rem auto;
     width: 70%;
   }
 
-  @media (max-width: ${Breakpoints.portrait}px) {
-    font-size: 2rem;
-  }
-
   @media (max-width: ${Breakpoints.phone}px) {
-    font-size: 2rem;
-
     text-align: center;
   }
 `;
 
 const Paragraph = styled.p`
-  font-weight: 300;
+  font-weight: 200;
   width: 50%;
   text-align: left;
-  line-height: 2;
-  filter: opacity(0.7);
+  line-height: 1.75;
+  color: #fedddd;
   @media (max-width: ${Breakpoints.landscape}px) {
     line-height: 1.5;
     font-size: 13px;
-    width: 70%;
-  }
 
+  }
   @media (max-width: ${Breakpoints.portrait}px) {
-    font-size: 10px;
-    line-height: 1.4;
+    font-size: 12px;
+    width: 70%;
   }
 `;
 
 const PictureShow = styled.img`
-  transform: skew(-20deg);
   max-height: 75%;
+  background-color: white;
+  border-radius: 50%;
+
 
   @media (max-width: ${Breakpoints.landscape}px) {
     height: 300px;
@@ -134,7 +126,6 @@ const PictureShow = styled.img`
   @media (max-width: ${Breakpoints.desktop}px) {
     height: 200px;
     width: 200px;
-    transform: skew(0deg);
     border: 10px solid #fa5757;
     border-radius: 50%;
     background-color: white;

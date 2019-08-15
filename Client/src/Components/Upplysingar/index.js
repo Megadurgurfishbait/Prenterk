@@ -1,8 +1,9 @@
 import React, { Component, Suspense } from "react";
-import styled from "styled-components";
+import styled, {css} from "styled-components";
 import AbsoluteList from "./AbsoluteList";
 import Breakpoints from "../Elements/breakpoints";
 import Info from "../../Assets/Footer/index";
+import {fade} from "../../Assets/Keyframes"
 
 const Map = React.lazy(() => import("./Map"));
 
@@ -33,7 +34,7 @@ class Upplysingar extends Component {
             Info={Info}
           />
         </Overlay>
-        <Button onClick={() => this.Ani()}> Sjá Staðsetningu</Button>
+        <Button drasl={this.state.showMap.toString()} onClick={() => this.Ani()}> { this.state.showMap ? "Loka korti" : "Sjá Staðsetningu"}</Button>
         <Suspense fallback={<div>Loading...</div>}>
           <Map />
         </Suspense>
@@ -86,6 +87,8 @@ const Button = styled.button`
   white-space: nowrap;
   color: white;
   border: 2px solid white;
+  animation: ${props =>  props.drasl === "true" ? css`"${fade} 1s linear" `: null};
+  ${props => console.log(props)}
   cursor: pointer;
   &:focus,
   &:active,

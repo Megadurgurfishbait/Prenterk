@@ -9,9 +9,11 @@ const Buttons = props => (
         {props.shouldISend ? (
           <Button onClick={() => props.clicks("Success")}>Senda</Button>
         ) : (
-          <Button notClickable>Fylla út</Button>
+          <Button notClickable>Fylla út form</Button>
         )}
-        <Button onClick={() => props.clicks("off")}>Hætta við </Button>
+        <Button color={true} onClick={() => props.clicks("off")}>
+          Hætta við
+        </Button>
       </Fragment>
     )}
   </Container>
@@ -35,27 +37,28 @@ const Container = styled.div`
 
 const Button = styled.button`
   border: none;
-  background-color: #fa5757;
+  background-color: ${props => (props.color ? "transparent" : "#fa5757")};
   display: block;
+
   width: 20%;
-  color: white;
+  color: ${props => (props.color ? "#fa5757" : "white")};
   min-width: 100px;
   font-weight: 100;
   white-space: nowrap;
   transition: background-color 0.4s ease;
   height: 60px;
   width: 200px;
-  border-radius: 30px;
-  font-size: 25px;
+  border-radius: 5px;
+  font-size: 20px;
   letter-spacing: 1.5px;
   margin: 20px;
   @media (max-width: ${Breakpoints.desktop}px) {
     width: 100px;
-    font-size: 16px;
+    font-size: 12px;
     height: 40px;
   }
   @media (max-width: ${Breakpoints.portrait}px) {
-    font-size: 15px;
+    font-size: 12px;
     margin: 0.3rem 0rem;
     text-align: center;
   }
@@ -63,6 +66,6 @@ const Button = styled.button`
     outline: none;
   }
   &:hover {
-    cursor: ${props => props.notClickable ? "default" : "pointer"};
+    cursor: ${props => (props.notClickable ? "default" : "pointer")};
   }
 `;

@@ -95,7 +95,7 @@ const Paragraph = styled.p`
   padding-left: 8px;
   text-align: left;
   color: white;
-  width: 50%;
+  width: 80%;
   font-weight: 300;
   font-family: "Roboto", serif;
   line-height: 2;
@@ -107,10 +107,13 @@ const Paragraph = styled.p`
     animation: ${abomination1} 15s linear 1;
     animation-fill-mode: forwards;
   }
-
+  
+  @media (max-width: ${Breakpoints.landscape}px) {
+    width: 120%;
+  }
   @media (max-width: ${Breakpoints.portrait}px) {
     width: 80%;
   }
 
-  
+ 
 `;

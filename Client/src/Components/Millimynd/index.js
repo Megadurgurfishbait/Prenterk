@@ -5,6 +5,8 @@ import Font from "../Utilities/Font";
 import Modal from "../Modal/index";
 import { TimelineMax, TweenMax } from "gsap/all";
 import Breakpoints from "../Elements/breakpoints";
+
+
 class HafaSamband extends React.Component {
   constructor(props) {
     super(props);
@@ -44,9 +46,9 @@ class HafaSamband extends React.Component {
             <Font> Ert þú með verkefni í huga? </Font>
           </Text>
           <Text>
-            <Font> Hafðu Samband.</Font>
+            <Font> Hafðu samband.</Font>
           </Text>
-          <Button onClick={() => this.handleMyClick("on")}>Hafa Samband</Button>
+          <Button onClick={() => this.handleMyClick("on")}>Hafa samband</Button>
         </ContactBox>
         <Overlay Image={Picture} />
         <Modal
@@ -142,8 +144,8 @@ const Button = styled.button`
   border: none;
   height: 60px;
   width: 250px;
-  border-radius: 30px;
-  font-size: 25px;
+  border-radius: 5px;
+  font-size: 20px;
   letter-spacing: 1.5px;
   font-weight: 200;
   &:hover {

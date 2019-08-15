@@ -11,7 +11,7 @@ import UmGunnar from "./Components/UmGunnar";
 const Background = React.lazy(() =>
   import("./Components/Millistig/Leftsidecontainer")
 );
-const Showcase = React.lazy(() => import("./Components/Showcase"));
+const Showcase = React.lazy(() => import("./Components/synihlutir"));
 const Upplysingar = React.lazy(() => import("./Components/Upplysingar"));
 
 const GlobalStyles = createGlobalStyle`
@@ -70,7 +70,6 @@ class App extends Component {
             }}
           />
         </Suspense>
-
         <Break />
         <Suspense fallback={<div>Loading...</div>}>
           <Showcase
@@ -79,13 +78,11 @@ class App extends Component {
             }}
           />
         </Suspense>
-
         <Break />
         <Millimynd />
         <Break />
         <UmGunnar />
         <Break />
-
         <Suspense fallback={<div>Loading...</div>}>
           <Upplysingar
             ref={section => {
@@ -93,7 +90,6 @@ class App extends Component {
             }}
           />
         </Suspense>
-
         <SideDrawer
           drawerClickHandler={this.drawerToggleClickHandler}
           show={this.state.sideDrawerOpen}

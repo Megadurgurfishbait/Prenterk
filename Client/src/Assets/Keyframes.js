@@ -359,3 +359,12 @@ export const abomination1 = keyframes`
     content: "Lítið fjölskyldufyrirtæki með persónulegri þjónustu, auga fyrir smáatriðum og einstaklega faglegan metnað.";
   }  
   `
+
+
+
+
+export const fade = keyframes`
+ 0% { opacity:0; }
+ 50% { opacity:1; } 
+ 100% { opacity:0; } 
+`;

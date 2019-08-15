@@ -4,7 +4,6 @@ import { TimelineMax, TweenMax } from "gsap/all";
 import scrollToComponent from "react-scroll-to-component";
 import Breakpoints from "../Elements/breakpoints";
 
-
 class AbsoluteList extends React.Component {
   constructor(props) {
     super(props);
@@ -151,7 +150,7 @@ class AbsoluteList extends React.Component {
 export default AbsoluteList;
 
 const Line = styled.div`
-  margin: 15px auto;
+  margin: 10px auto;
   height: 3px;
   background-color: white;
   width: 100%;
@@ -164,7 +163,7 @@ const Line = styled.div`
 `;
 
 const Title = styled.h4`
-  font-size: 22px;
+  font-size: 15px;
   color: white;
   font-weight: 200;
   display: flex;
@@ -224,12 +223,12 @@ const TextContainer = styled.div`
 
 const Text = styled.h5`
   color: white;
-  height: 40px;
-  font-size: 30px;
+  height: 30px;
+  font-size: 20px;
   font-weight: 200;
   margin: 0px;
   padding: 0px;
-  letter-spacing: 4.5px;
+  letter-spacing: 3.5px;
 
   @media (max-width: ${Breakpoints.desktop}px) {
     letter-spacing: 1.5px;

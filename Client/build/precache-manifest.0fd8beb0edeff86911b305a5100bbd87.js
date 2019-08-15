@@ -1,39 +1,39 @@
 self.__precacheManifest = [
   {
-    "revision": "3bcdaeb5f24a70be3dcf",
-    "url": "/static/js/0.3bcdaeb5.chunk.js"
+    "revision": "21277f3fa3f174a21c62",
+    "url": "/static/js/main.21277f3f.chunk.js"
   },
   {
-    "revision": "94d86bd9b5d78ec3ff23",
-    "url": "/static/js/main.94d86bd9.chunk.js"
+    "revision": "08833fa8e1cad61f4a43",
+    "url": "/static/js/1.08833fa8.chunk.js"
   },
   {
-    "revision": "663a08550f7f675ac6dd",
-    "url": "/static/js/2.663a0855.chunk.js"
+    "revision": "91248facf77fa50c4c78",
+    "url": "/static/js/2.91248fac.chunk.js"
   },
   {
-    "revision": "f22d1612b80edc5c24d7",
-    "url": "/static/js/3.f22d1612.chunk.js"
+    "revision": "b8733dc0de09719fa16e",
+    "url": "/static/js/3.b8733dc0.chunk.js"
   },
   {
-    "revision": "23fca115d0030097c737",
-    "url": "/static/js/4.23fca115.chunk.js"
+    "revision": "05b6194b203d1167679a",
+    "url": "/static/js/4.05b6194b.chunk.js"
   },
   {
-    "revision": "c3976515c0d62b866eb6",
-    "url": "/static/js/5.c3976515.chunk.js"
+    "revision": "889dd130c35304f6cafb",
+    "url": "/static/js/5.889dd130.chunk.js"
   },
   {
-    "revision": "099bf9a7b3d6f21066ec",
-    "url": "/static/js/6.099bf9a7.chunk.js"
+    "revision": "8f6613e6dc99fb9ddff6",
+    "url": "/static/js/6.8f6613e6.chunk.js"
   },
   {
-    "revision": "e18c5aaf9e911fe5a513",
-    "url": "/static/js/7.e18c5aaf.chunk.js"
+    "revision": "5271cbe498ec98782eb2",
+    "url": "/static/js/7.5271cbe4.chunk.js"
   },
   {
-    "revision": "6e26c523486715a4f3be",
-    "url": "/static/js/runtime~main.6e26c523.js"
+    "revision": "7e7bb58eb37b70cd0731",
+    "url": "/static/js/runtime~main.7e7bb58e.js"
   },
   {
     "revision": "ce6e006be0e04a5f7a1421b9f7da38a4",
@@ -120,6 +120,18 @@ self.__precacheManifest = [
     "url": "/static/media/nafnspjald_3.c7e4a57c.JPG"
   },
   {
+    "revision": "10d4e0c6aeaa8e0acbd7b275da1746f2",
+    "url": "/static/media/flugeldabladid.10d4e0c6.PNG"
+  },
+  {
+    "revision": "f488a9872e587a24fd6a61fbbd06655f",
+    "url": "/static/media/Lions.f488a987.PNG"
+  },
+  {
+    "revision": "9a2853c824e9849ad0297aa5031ebfb2",
+    "url": "/static/media/litlibergthor.9a2853c8.PNG"
+  },
+  {
     "revision": "e3779cbcbebc2188fa6130d5af090e47",
     "url": "/static/media/001-map-location.e3779cbc.svg"
   },
@@ -132,7 +144,23 @@ self.__precacheManifest = [
     "url": "/static/media/003-smartphone.e75dae08.svg"
   },
   {
-    "revision": "26bd0be4eef738dac2eb299c27f50b2d",
+    "revision": "286abe0dc2bdb309d6efdc313a230cd9",
+    "url": "/static/media/003-down-arrow.286abe0d.svg"
+  },
+  {
+    "revision": "1d6c1801e04024f6f9eea3fb1f36bae0",
+    "url": "/static/media/004-up-arrow.1d6c1801.svg"
+  },
+  {
+    "revision": "290174b6259ea557de7fde682836d3c6",
+    "url": "/static/media/002-back.290174b6.svg"
+  },
+  {
+    "revision": "1ee4c3ee10a89d4ebe3782b2ff0d9eea",
+    "url": "/static/media/001-right-arrow.1ee4c3ee.svg"
+  },
+  {
+    "revision": "ac6201ac7c533f86336a0b0b1ab970ac",
     "url": "/index.html"
   }
 ];

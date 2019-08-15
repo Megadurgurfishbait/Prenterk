@@ -4,35 +4,61 @@ import Breakpoints from "../Elements/breakpoints";
 import IconInfo from "../../Assets/Millistig/index";
 import { hellomoto } from "../Utilities/Animations";
 
+function getSize() {
+  return window.scrollY + window.innerHeight;
+}
+
 class LeftSideContainer extends React.Component {
   constructor(props) {
     super(props);
     this.Array = [];
+    this.state = {
+      width: getSize(),
+      count: 0
+    };
   }
 
+  handleResize = () => {
+    this.setState({ width: getSize() });
+  };
+
   componentDidMount() {
-    hellomoto(this.Array, false, 0.5, 0.2);
+    window.addEventListener("scroll", this.handleResize);
+  }
+
+  componentDidUpdate() {
+    if (this.state.width > 700 && this.state.count === 0) {
+      hellomoto(this.Array, false, 0.5, 0.2);
+      this.setState({count: this.state.count + 1});
+    }
   }
 
   render() {
     return (
       <Container>
-        {IconInfo.map((values, index) => {
-          return (
-            <Information ref={c => (this.Array[index] = c)} key={index}>
-              <Images>
-                <Icon src={values.Pic} alt={`${values.Name}`}/>
-              </Images>
-              <Text>{values.Name}</Text>
-            </Information>
-          );
-        })}
+        {this.state.width > 700 || this.state.count === 1
+          ? IconInfo.map((values, index) => {
+              return (
+                <Information ref={c => (this.Array[index] = c)} key={index}>
+                  <Images>
+                    <Icon src={values.Pic} alt={`${values.Name}`} />
+                  </Images>
+                  <Text>{values.Name}</Text>
+                </Information>
+              );
+            })
+          : <Height300 />}
       </Container>
     );
   }
 }
 
 export default LeftSideContainer;
+
+const Height300 = styled.div`
+  width: 100%;
+  height: 300px;
+  `;
 
 const Container = styled.div`
   display: flex;
@@ -57,8 +83,8 @@ const Container = styled.div`
 `;
 
 const Icon = styled.img`
-  height: 45px;
-  width: 45px;
+  height: 25px;
+  width: 25px;
   display: block;
   @media (max-width: ${Breakpoints.portrait}px) {
     height: 20px;
@@ -67,8 +93,8 @@ const Icon = styled.img`
 `;
 
 const Images = styled.div`
-  height: 80px;
-  min-width: 80px;
+  height: 50px;
+  min-width: 50px;
   display: flex;
   border-radius: 100%;
   background-color: #fa5757;

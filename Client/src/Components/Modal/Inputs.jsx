@@ -198,7 +198,7 @@ const Container = styled.div`
   width: 100%;
   height: 100%;
   color: inherit;
-  justify-content: space-around;
+  justify-content: flex-start;
 `;
 
 const Column = styled.div`

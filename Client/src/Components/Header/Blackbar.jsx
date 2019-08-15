@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Breakpoints from "../Elements/breakpoints";
 import Icon from "./icon";
+
 class Blackbar extends React.Component {
   constructor(props) {
     super(props);
@@ -49,6 +50,7 @@ const BlackHeader = styled.div`
   height: 100px;
   width: 100%;
   position: relative;
+  z-index: 4000000000000000000000000000;
 `;
 
 const LeftText = styled.ul`
@@ -60,6 +62,12 @@ const LeftText = styled.ul`
   padding-left: 250px;
   @media (max-width: ${Breakpoints.desktop}px) {
     display: none;
+  }
+
+  & > * {
+    &:focus {
+    outline: none !important;
+  }
   }
 `;
 
@@ -81,9 +89,10 @@ const Button = styled.button`
   white-space: nowrap;
   letter-spacing: 3px;
   &:hover,
-  &:active,
-  &:focus {
+  &:active {
     border-bottom: 1px solid white;
     outline: none;
   }
+
+  
 `;

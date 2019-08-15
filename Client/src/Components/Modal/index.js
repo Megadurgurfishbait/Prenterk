@@ -21,8 +21,7 @@ const Container = styled.div`
   z-index: 40;
   position: absolute;
   width: 70vw;
-  height: 80%;
-  bottom: -1000px;
+  bottom: -800px;
   margin: 0px auto;
   display: ${props => props.display ? "flex" : "none"};
   flex-direction: column;
@@ -32,11 +31,13 @@ const Container = styled.div`
 
   @media (max-width: ${Breakpoints.landscape}px) {
     width: 90vw;
+    bottom: -1000px;
   }
 
   @media (max-width: ${Breakpoints.portrait}px) {
     width: 75vw;
     height: 95%;
+    justify-content: flex-start;
   }
 
   @media (max-width: ${Breakpoints.phone}px) {
