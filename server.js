@@ -1,7 +1,7 @@
 //server.js
 const express = require('express');
 const path = require('path');
-const port = process.env.PORT || 2666;
+const port = process.env.PORT || 1111;
 const bodyParser = require('body-parser');
 var compression = require('compression');
 
@@ -21,9 +21,6 @@ app.use(bodyParser.urlencoded({extended: false}));
 
 const email = require('./EmailSettings/Email');
 app.post('/email', email.sendEmail)
-app.post('/email', (req, res) => {
-      console.log(req.body);
-})
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, './Client/build', 'index.html'), {maxAge: "360d"});

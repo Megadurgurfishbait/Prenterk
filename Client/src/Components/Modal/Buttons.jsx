@@ -39,7 +39,6 @@ const Button = styled.button`
   border: none;
   background-color: ${props => (props.color ? "transparent" : "#fa5757")};
   display: block;
-
   width: 20%;
   color: ${props => (props.color ? "#fa5757" : "white")};
   min-width: 100px;

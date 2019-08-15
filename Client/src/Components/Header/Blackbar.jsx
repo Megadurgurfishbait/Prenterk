@@ -50,7 +50,6 @@ const BlackHeader = styled.div`
   height: 100px;
   width: 100%;
   position: relative;
-  z-index: 4000000000000000000000000000;
 `;
 
 const LeftText = styled.ul`

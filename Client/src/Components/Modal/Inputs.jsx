@@ -111,7 +111,7 @@ export default class Inputs extends Component {
     } = this.state;
 
     if (nameFinish && emailFinish && phoneFinish && titleFinish && textFinish) {
-      await Axios.post(`/email`, { name, email, phone, title, text })
+      await Axios.post(`http://prentverknytt.biggaferdir.is/email`, { name, email, phone, title, text })
         .then(res => {
           if (res.data) {
             this.setState({ sent: true });
