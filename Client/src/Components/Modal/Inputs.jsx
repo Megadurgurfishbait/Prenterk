@@ -97,6 +97,8 @@ export default class Inputs extends Component {
   };
 
   async sendItems() {
+    console.log("Click");
+    
     const {
       name,
       email,
@@ -111,8 +113,10 @@ export default class Inputs extends Component {
     } = this.state;
 
     if (nameFinish && emailFinish && phoneFinish && titleFinish && textFinish) {
+      console.log("HER");
       await Axios.post(`http://prentverknytt.biggaferdir.is/email`, { name, email, phone, title, text })
         .then(res => {
+          console.log(res);
           if (res.data) {
             this.setState({ sent: true });
           }

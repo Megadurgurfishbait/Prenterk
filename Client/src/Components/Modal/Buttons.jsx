@@ -2,12 +2,26 @@ import React, { Fragment } from "react";
 import styled from "styled-components";
 import Breakpoints from "../Elements/breakpoints";
 
-const Buttons = props => (
+
+
+
+const Buttons = props => {
+
+
+  const clickUs = () => {
+    props.clicks("Success");
+    props.sendItems();
+
+  }
+
+  return (
+    
+
   <Container>
     {!props.sent && (
       <Fragment>
         {props.shouldISend ? (
-          <Button onClick={() => props.clicks("Success")}>Senda</Button>
+          <Button onClick={() => clickUs()}>Senda</Button>
         ) : (
           <Button notClickable>Fylla út form</Button>
         )}
@@ -17,7 +31,7 @@ const Buttons = props => (
       </Fragment>
     )}
   </Container>
-);
+  )};
 
 export default Buttons;
 
