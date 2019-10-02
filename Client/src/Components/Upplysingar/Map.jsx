@@ -2,6 +2,7 @@ import React from "react";
 import { Map as LeafletMap, TileLayer, Marker, Popup } from "react-leaflet";
 import styled from "styled-components";
 import Breakpoints from '../Elements/breakpoints';
+
 class Maps extends React.Component {
   constructor() {
     super();

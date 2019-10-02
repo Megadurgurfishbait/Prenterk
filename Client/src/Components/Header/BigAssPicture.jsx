@@ -34,7 +34,7 @@ const BigTitleDiv = styled.div`
 `;
 
 const TitleContainer = styled.div`
-  height: 50%;
+  height: 60%;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -62,7 +62,6 @@ const TextContainer = styled.div`
   margin: 0rem 1rem 0rem 15rem;
   display: flex;
   flex-direction: column;
-
   @media (max-width: ${Breakpoints.landscape}px) {
     margin: auto 0px;
   }

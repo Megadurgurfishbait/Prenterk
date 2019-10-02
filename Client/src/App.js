@@ -3,6 +3,7 @@ import Header from "./Components/Header";
 import scrollToComponent from "react-scroll-to-component";
 import styled, { createGlobalStyle } from "styled-components";
 
+import SEO from "./Components/SEO";
 import Millimynd from "./Components/Millimynd";
 import { Break } from "./Components/Utilities/break";
 import SideDrawer from "./Components/SideDrawer/SideDrawer";
@@ -57,6 +58,7 @@ class App extends Component {
   render() {
     return (
       <AppDiv>
+        <SEO />
         <GlobalStyles />
         <Header
           button={this._scrollToDiv}

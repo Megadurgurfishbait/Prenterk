@@ -2,6 +2,8 @@ import React from "react";
 import styled, { css } from "styled-components";
 import Breakpoints from "../Elements/breakpoints";
 
+// Hooks
+import useWindowDimension from "../../Hooks/useWindowDimensions";
 // Assets
 import {
   getBiggerAndFadeLeft,
@@ -10,58 +12,45 @@ import {
 } from "./Assets/Keyframes";
 import { ReactComponent as LogoLeft } from "./Assets/svg/002-back.svg";
 import { ReactComponent as LogoRight } from "./Assets/svg/001-right-arrow.svg";
-import Items from "../../Assets/Products/index";
 
-function getSize() {
-  return {
-    innerWidth: window.innerWidth
-  };
-}
+import Items from "../../Assets/Products/index";
 
 const ImageContainer = ({ type }) => {
   const [count, setCount] = React.useState(0);
-  const [width, setWidth] = React.useState(getSize());
-
-  function handleResize() {
-    setWidth(getSize());
-  }
-  React.useEffect(() => {
-    window.addEventListener("resize", handleResize);
-
-    if (width.innerWidth <= 1500) {
-      setCount(0);
-    }
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
+  const { width } = useWindowDimension();
   return (
     <Container>
       <RelativeContainer>
         {Items.map(values => (
           <ColumnContainer up={type}>
-            <ImageWrapper left={width.innerWidth <= 1500 ? count : 0}>
+            <ImageWrapper left={width <= 1500 ? count : 0}>
               {values.map(value => (
-                <Image src={value} />
+                <Image
+                  src={width > 700 ? value.img : value.imgSmall}
+                  alt={value.altText}
+                />
               ))}
             </ImageWrapper>
           </ColumnContainer>
         ))}
       </RelativeContainer>
 
-      {width.innerWidth <= 1500 ? (
+      {width <= 1500 && (
         <ArrowFunction>
-          {count > -600 ? (
-            <RadioButton direction="left" onClick={() => setCount(count - 600)}>
+          {count > -600 && (
+            <RadioButton
+              aria-label="Skoða fleiri sýnishorn"
+              direction="left"
+              onClick={() => setCount(count - 600)}
+            >
               <Span>
                 <LeftLogo />
               </Span>
             </RadioButton>
-          ) : (
-            ""
           )}
-          {count < 600 ? (
+          {count < 600 && (
             <RadioButton
+              aria-label="Skoða fleiri sýnishorn"
               direction="right"
               onClick={() => setCount(count + 600)}
             >
@@ -69,11 +58,9 @@ const ImageContainer = ({ type }) => {
                 <RightLogo />
               </Span>
             </RadioButton>
-          ) : (
-            ""
           )}
         </ArrowFunction>
-      ) : null}
+      )}
     </Container>
   );
 };
@@ -176,7 +163,6 @@ const RadioButton = styled.button`
   background-color: rgba(233, 233, 233, 0.8);
   box-shadow: 0px 0px 12px -2px rgba(0, 0, 0, 0.75);
   overflow: hidden;
-
 
   @media (max-width: ${Breakpoints.portrait}px) {
     height: 45px;

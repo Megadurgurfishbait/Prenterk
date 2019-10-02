@@ -1,26 +1,41 @@
 import React from "react";
 import styled from "styled-components";
-import Image from "../../Assets/AboutUs/owner.png";
+import { Large, Small } from "../../Assets/AboutUs/";
+import useWindowDimensions from "../../Hooks/useWindowDimensions";
 import Breakpoints from "../Elements/breakpoints";
-const UmGunnar = () => (
-  <Container>
-    <Info>
-      <PictureShow src={Image} />
-    </Info>
-    <Picture>
-      <Title>Gunnar Gunnarsson </Title>
-      <Paragraph>
-        Gunnar var í Iðnskólanum í Reykjavík 1970-1971, en hóf nám í prentun 15.
-        október 1971 í Prentsmiðju Suðurlands á Selfossi. Hann lauk námi 1975 og
-        tók sveinspróf 1976. Síðan starfaði hann samfleytt hjá Prentsmiðju
-        Suðurlands þar til hann stofnaði sína eigin prentsmiðju. Fyrirtækið er
-        rekið sem einstaklingsfyrirtæki og vinnur Gunnar mestmegnis einn.
-      </Paragraph>
-    </Picture>
-  </Container>
-);
+const UmGunnar = () => {
+  const { width } = useWindowDimensions();
+
+  return (
+    <Container>
+      <Info>
+        <PictureShow alt="Mynd af eiganda" src={width > 700 ? Large : Small} />
+      </Info>
+      <Picture>
+        <Title>Gunnar Gunnarsson </Title>
+        <Break />
+        <Paragraph>
+          Gunnar var í Iðnskólanum í Reykjavík 1970-1971, en hóf nám í prentun
+          15. október 1971 í Prentsmiðju Suðurlands á Selfossi. Hann lauk námi
+          1975 og tók sveinspróf 1976. Síðan starfaði hann samfleytt hjá
+          Prentsmiðju Suðurlands þar til hann stofnaði sína eigin prentsmiðju.
+          Fyrirtækið er rekið sem einstaklingsfyrirtæki og vinnur Gunnar
+          mestmegnis einn.
+        </Paragraph>
+      </Picture>
+    </Container>
+  );
+};
 
 export default UmGunnar;
+
+const Break = styled.div`
+  height: 1px;
+  width: 100%;
+  background-color: white;
+  margin: 15px 0px;
+  width: 50%;
+`;
 
 const Container = styled.div`
   width: 100%;
@@ -34,7 +49,6 @@ const Container = styled.div`
 `;
 
 const Info = styled.div`
-
   flex: 1 1 50%;
   margin: -2px;
   margin-left: -150px;
@@ -76,7 +90,7 @@ const Picture = styled.div`
 `;
 
 const Title = styled.h1`
-  font-weight: 300;
+  font-weight: 500;
   width: 50%;
   text-align: left;
   margin: 0.2rem 0px;
@@ -97,7 +111,7 @@ const Title = styled.h1`
 `;
 
 const Paragraph = styled.p`
-  font-weight: 200;
+  font-weight: 300;
   width: 50%;
   text-align: left;
   line-height: 1.75;
@@ -105,7 +119,6 @@ const Paragraph = styled.p`
   @media (max-width: ${Breakpoints.landscape}px) {
     line-height: 1.5;
     font-size: 13px;
-
   }
   @media (max-width: ${Breakpoints.portrait}px) {
     font-size: 12px;
@@ -117,7 +130,7 @@ const PictureShow = styled.img`
   max-height: 75%;
   background-color: white;
   border-radius: 50%;
-
+  border: 5px solid white;
 
   @media (max-width: ${Breakpoints.landscape}px) {
     height: 300px;

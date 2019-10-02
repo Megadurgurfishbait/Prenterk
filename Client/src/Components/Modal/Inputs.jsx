@@ -97,8 +97,6 @@ export default class Inputs extends Component {
   };
 
   async sendItems() {
-    console.log("Click");
-    
     const {
       name,
       email,
@@ -113,10 +111,14 @@ export default class Inputs extends Component {
     } = this.state;
 
     if (nameFinish && emailFinish && phoneFinish && titleFinish && textFinish) {
-      console.log("HER");
-      await Axios.post(`http://prentverknytt.biggaferdir.is/email`, { name, email, phone, title, text })
+      await Axios.post(`http://pvs.is/email`, {
+        name,
+        email,
+        phone,
+        title,
+        text
+      })
         .then(res => {
-          console.log(res);
           if (res.data) {
             this.setState({ sent: true });
           }
@@ -130,15 +132,16 @@ export default class Inputs extends Component {
   }
 
   render() {
-    let {nameFinish,
+    let {
+      nameFinish,
       emailFinish,
       phoneFinish,
       titleFinish,
-      textFinish} = this.state;
+      textFinish
+    } = this.state;
     let Allow = false;
     if (nameFinish && emailFinish && phoneFinish && titleFinish && textFinish) {
       Allow = true;
-
     }
     return (
       <Container>

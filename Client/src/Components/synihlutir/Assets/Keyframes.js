@@ -1,4 +1,4 @@
-import { keyframes, css } from "styled-components";
+import { keyframes } from "styled-components";
 
 export const upDown = keyframes`
     0% { transform: translateY(0px);}

@@ -1,11 +1,7 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
-const Font = (props) => (
-    <Container>
-        {props.children}
-    </Container>
-)
+const Font = props => <Container>{props.children}</Container>;
 
 export default Font;
 
@@ -15,6 +11,4 @@ const Container = styled.h5`
   font-family: "roboto";
   font-weight: 300;
   border-bottom: 2px solid transparent;
-
-
 `;

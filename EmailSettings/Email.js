@@ -38,7 +38,7 @@ exports.sendEmail = function(req, res) {
     });
     let mailOption = {
       from: "prentverkbotti@gmail.com",
-      to: "gss21@hi.is",
+      to: "pvs@pvs.is",
       subject: `${req.body.title}`,
       html: htmlEmail
     };

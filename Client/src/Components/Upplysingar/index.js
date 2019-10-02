@@ -1,11 +1,10 @@
-import React, { Component, Suspense } from "react";
-import styled, {css} from "styled-components";
+import React, { Component } from "react";
+import styled, { css } from "styled-components";
 import AbsoluteList from "./AbsoluteList";
+import Map from "./Map";
 import Breakpoints from "../Elements/breakpoints";
 import Info from "../../Assets/Footer/index";
-import {fade} from "../../Assets/Keyframes"
-
-const Map = React.lazy(() => import("./Map"));
+import { fade } from "../../Assets/Keyframes";
 
 class Upplysingar extends Component {
   constructor(props) {
@@ -34,10 +33,14 @@ class Upplysingar extends Component {
             Info={Info}
           />
         </Overlay>
-        <Button drasl={this.state.showMap.toString()} onClick={() => this.Ani()}> { this.state.showMap ? "Loka korti" : "Sjá Staðsetningu"}</Button>
-        <Suspense fallback={<div>Loading...</div>}>
-          <Map />
-        </Suspense>
+        <Button
+          aria-label="Loka og Opna kort"
+          drasl={this.state.showMap.toString()}
+          onClick={() => this.Ani()}
+        >
+          {this.state.showMap ? "Loka korti" : "Sjá Staðsetningu"}
+        </Button>
+        <Map />
       </Container>
     );
   }
@@ -87,8 +90,8 @@ const Button = styled.button`
   white-space: nowrap;
   color: white;
   border: 2px solid white;
-  animation: ${props =>  props.drasl === "true" ? css`"${fade} 1s linear" `: null};
-  ${props => console.log(props)}
+  animation: ${props =>
+    props.drasl === "true" ? css`"${fade} 1s linear" ` : null};
   cursor: pointer;
   &:focus,
   &:active,

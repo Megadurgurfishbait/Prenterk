@@ -5,7 +5,12 @@ import Breakpoints from "../Elements/breakpoints";
 const Icon = ({ drawerClickHandler }) => (
   <IconCon>
     <Button type="checkbox" name="checkbox" id="checkbox_id" value="value" />
-    <Label htmlFor="checkbox_id" onClick={() => drawerClickHandler()}>
+    <Label
+      htmlFor="checkbox_id"
+      role="button"
+      aria-label="Opna Menu"
+      onClick={() => drawerClickHandler()}
+    >
       <TopLeft />
       <TopRight />
       <BottomLeft />

@@ -26,6 +26,9 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, './Client/build', 'index.html'), {maxAge: "360d"});
 });
 
+app.get('/*', (req, res) => {
+  res.redirect('/');
+});
 
 app.listen(port);
 

@@ -1,72 +1,66 @@
 import React from "react";
 import styled from "styled-components";
 import Breakpoints from "../Elements/breakpoints";
+
+import useWindowDimensions from "../../Hooks/useWindowDimensions";
 import Icon from "./icon";
 
-class Blackbar extends React.Component {
-  constructor(props) {
-    super(props);
-    this.container = [];
-  }
+const Blackbar = ({ drawerClickHandler, button }) => {
+  const { width } = useWindowDimensions();
 
-  render() {
-    return (
-      <BlackHeader>
-        <Icon drawerClickHandler={this.props.drawerClickHandler} />
-        <LeftText>
-          <Button
-            ref={c => (this.container[0] = c)}
-            id="vorur"
-            onClick={this.props.button}
-          >
-            Vörur
-          </Button>
-          <Button
-            ref={c => (this.container[1] = c)}
-            id="synishorn"
-            onClick={this.props.button}
-          >
-            Sýnishorn
-          </Button>
-          <Button
-            ref={c => (this.container[2] = c)}
-            id="umOkkur"
-            onClick={this.props.button}
-          >
-            Um okkur
-          </Button>
-        </LeftText>
-      </BlackHeader>
-    );
-  }
-}
+  return (
+    <BlackHeader mobileHeader={width < 700 ? "100%" : "1000px"}>
+      {width < 700 && <Icon drawerClickHandler={drawerClickHandler} />}
+      {width > 700 && 
+      <LeftText>
+        <Button role="button" aria-label="Skoða Vörur" id="vorur" onClick={button}>
+          Vörur
+        </Button>
+        <Button  role="button" aria-label="Skoða Sýnishorn" id="synishorn" onClick={button}>
+          Sýnishorn
+        </Button>
+        <Button role="button" aria-label="Skoða um okkur" id="umOkkur" onClick={button}>
+          Um okkur
+        </Button>
+      </LeftText>
+      }
+    </BlackHeader>
+  );
+};
 
 export default Blackbar;
-
 
 const BlackHeader = styled.div`
   display: flex;
   background-color: transparent;
   height: 100px;
-  width: 100%;
+  width: ${props => props.mobileHeader};
   position: relative;
+  z-index: 500000000000;
 `;
 
 const LeftText = styled.ul`
+  width: 100%;
+  height: 100%;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  align-content: center;
-  justify-self: flex-end;
-  padding-left: 250px;
+  justify-content: space-evenly;
+  background-color: #fa5757;
+  margin: 0px;
+  border-bottom-left-radius: 130px 100px;
+  border-bottom-right-radius: 130px 100px;
+  border: 2px solid white;
+  border-top: none;
+  padding: 0px;
+
   @media (max-width: ${Breakpoints.desktop}px) {
     display: none;
   }
 
   & > * {
     &:focus {
-    outline: none !important;
-  }
+      outline: none !important;
+    }
   }
 `;
 
@@ -76,11 +70,10 @@ const Button = styled.button`
   height: 60%;
   color: white;
   font-size: 1.5rem;
-  font-weight: 200;
+  font-weight: 300;
   z-index: 55;
   font-family: "Roboto", serif;
   text-transform: uppercase;
-  margin-right: 5rem;
   padding: 0px;
   cursor: pointer;
   border-bottom: 1px solid transparent;
@@ -92,6 +85,4 @@ const Button = styled.button`
     border-bottom: 1px solid white;
     outline: none;
   }
-
-  
 `;

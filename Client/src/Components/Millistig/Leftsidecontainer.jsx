@@ -4,6 +4,8 @@ import Breakpoints from "../Elements/breakpoints";
 import IconInfo from "../../Assets/Millistig/index";
 import { hellomoto } from "../Utilities/Animations";
 
+import mySprite from "../../Assets/Millistig/css_sprites.png";
+
 function getSize() {
   return window.scrollY + window.innerHeight;
 }
@@ -29,25 +31,31 @@ class LeftSideContainer extends React.Component {
   componentDidUpdate() {
     if (this.state.width > 700 && this.state.count === 0) {
       hellomoto(this.Array, false, 0.5, 0.2);
-      this.setState({count: this.state.count + 1});
+      this.setState({ count: this.state.count + 1 });
     }
   }
 
   render() {
     return (
       <Container>
-        {this.state.width > 700 || this.state.count === 1
-          ? IconInfo.map((values, index) => {
-              return (
-                <Information ref={c => (this.Array[index] = c)} key={index}>
-                  <Images>
-                    <Icon src={values.Pic} alt={`${values.Name}`} />
-                  </Images>
-                  <Text>{values.Name}</Text>
-                </Information>
-              );
-            })
-          : <Height300 />}
+        {this.state.width > 700 || this.state.count === 1 ? (
+          IconInfo.map((values, index) => {
+            return (
+              <Information ref={c => (this.Array[index] = c)} key={index}>
+                <Images>
+                  <Icon
+                    iconImage={mySprite}
+                    backgroundpos={values.Pic}
+                    alt={`${values.Name}`}
+                  />
+                </Images>
+                <Text>{values.Name}</Text>
+              </Information>
+            );
+          })
+        ) : (
+          <Height300 />
+        )}
       </Container>
     );
   }
@@ -58,7 +66,7 @@ export default LeftSideContainer;
 const Height300 = styled.div`
   width: 100%;
   height: 300px;
-  `;
+`;
 
 const Container = styled.div`
   display: flex;
@@ -82,13 +90,16 @@ const Container = styled.div`
   }
 `;
 
-const Icon = styled.img`
-  height: 25px;
-  width: 25px;
+const Icon = styled.div`
+  height: 33px;
+  width: 33px;
+  background-image: url(${props => props.iconImage});
+  background-position: -1px ${props => props.backgroundpos};
   display: block;
+
   @media (max-width: ${Breakpoints.portrait}px) {
-    height: 20px;
-    width: 20px;
+    height: 33px;
+    width: 33px;
   }
 `;
 
@@ -100,10 +111,11 @@ const Images = styled.div`
   background-color: #fa5757;
   justify-content: center;
   align-items: center;
+  padding: 5px;
 
   @media (max-width: ${Breakpoints.portrait}px) {
-    height: 35px;
-    min-width: 35px;
+    height: 45px;
+    min-width: 45px;
   }
 `;
 
@@ -125,6 +137,7 @@ const Information = styled.div`
   @media (max-width: ${Breakpoints.portrait}px) {
     width: 50%;
     height: 50px;
+    margin-top: 20px;
   }
 
   @media (max-width: ${Breakpoints.phone}px) {

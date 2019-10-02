@@ -2,36 +2,29 @@ import React, { Fragment } from "react";
 import styled from "styled-components";
 import Breakpoints from "../Elements/breakpoints";
 
-
-
-
 const Buttons = props => {
-
-
   const clickUs = () => {
     props.clicks("Success");
     props.sendItems();
-
-  }
+  };
 
   return (
-    
-
-  <Container>
-    {!props.sent && (
-      <Fragment>
-        {props.shouldISend ? (
-          <Button onClick={() => clickUs()}>Senda</Button>
-        ) : (
-          <Button notClickable>Fylla út form</Button>
-        )}
-        <Button color={true} onClick={() => props.clicks("off")}>
-          Hætta við
-        </Button>
-      </Fragment>
-    )}
-  </Container>
-  )};
+    <Container>
+      {!props.sent && (
+        <Fragment>
+          {props.shouldISend ? (
+            <Button aria-label="Senda form" onClick={() => clickUs()}>Senda</Button>
+          ) : (
+            <Button aria-label="Þarf að fylla út form" notClickable>Fylla út form</Button>
+          )}
+          <Button aria-label="Hætta við að senda form" color={"true"} onClick={() => props.clicks("off")}>
+            Hætta við
+          </Button>
+        </Fragment>
+      )}
+    </Container>
+  );
+};
 
 export default Buttons;
 

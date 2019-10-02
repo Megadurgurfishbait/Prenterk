@@ -136,7 +136,7 @@ class AbsoluteList extends React.Component {
                 </>
               ) : (
                 <Left>
-                  <Image src={values.Icon} />
+                  <Image alt={values.Title} src={values.Icon} />
                 </Left>
               )}
             </Group>
@@ -165,10 +165,11 @@ const Line = styled.div`
 const Title = styled.h4`
   font-size: 15px;
   color: white;
-  font-weight: 200;
+  font-weight: 400;
   display: flex;
   width: 100%;
   margin: 0px auto;
+  letter-spacing: 2px;
   @media (max-width: ${Breakpoints.portrait}px) {
     font-size: 12px;
   }
@@ -225,7 +226,7 @@ const Text = styled.h5`
   color: white;
   height: 30px;
   font-size: 20px;
-  font-weight: 200;
+  font-weight: 400;
   margin: 0px;
   padding: 0px;
   letter-spacing: 3.5px;
