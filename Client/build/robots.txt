@@ -1,4 +1,5 @@
 User-Agent: *
 Disallow: 
 
+Sitemap: https://www.pvs.is/sitemap.xml
 Sitemap: http://www.pvs.is/sitemap.xml

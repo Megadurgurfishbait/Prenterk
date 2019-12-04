@@ -162,6 +162,6 @@ const Text = styled.h5`
   }
 
   @media (max-width: ${Breakpoints.phone}px) {
-    font-size: 18px;
+    font-size: 14px;
   }
 `;

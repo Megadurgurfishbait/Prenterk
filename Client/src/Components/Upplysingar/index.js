@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import styled, { css } from "styled-components";
+import LazyLoad from "react-lazy-load";
 import AbsoluteList from "./AbsoluteList";
 import Map from "./Map";
 import Breakpoints from "../Elements/breakpoints";
@@ -11,14 +12,20 @@ class Upplysingar extends Component {
     super(props);
     this.containerEnter = null;
     this.state = {
-      showMap: false
+      showMap: false,
+      clickable: true
     };
   }
 
-  Ani = () => {
+  sleep = m => new Promise(r => setTimeout(r, m));
+
+  asyncCall = async () => {
+    this.setState({ clickable: false });
     this.setState({
       showMap: !this.state.showMap
     });
+    await this.sleep(2000);
+    this.setState({ clickable: true });
   };
 
   render() {
@@ -36,11 +43,13 @@ class Upplysingar extends Component {
         <Button
           aria-label="Loka og Opna kort"
           drasl={this.state.showMap.toString()}
-          onClick={() => this.Ani()}
+          onClick={this.state.clickable ? () => this.asyncCall() : null}
         >
           {this.state.showMap ? "Loka korti" : "Sjá Staðsetningu"}
         </Button>
-        <Map />
+        <LazyLoad height={500} offsetVertical={900}>
+          <Map />
+        </LazyLoad>
       </Container>
     );
   }
@@ -79,6 +88,7 @@ const Overlay = styled.div`
 const Button = styled.button`
   position: absolute;
   font-size: 16px;
+  font-weight: 500;
   top: 40px;
   right: 20px;
   z-index: 3000;

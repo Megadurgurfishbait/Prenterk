@@ -49,7 +49,7 @@ const Button = styled.button`
   width: 20%;
   color: ${props => (props.color ? "#fa5757" : "white")};
   min-width: 100px;
-  font-weight: 100;
+  font-weight: 500;
   white-space: nowrap;
   transition: background-color 0.4s ease;
   height: 60px;

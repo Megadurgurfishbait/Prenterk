@@ -1,19 +1,18 @@
-import React, { Component, Suspense } from "react";
-import Header from "./Components/Header";
+import React, { useState, createRef, Suspense } from "react";
 import scrollToComponent from "react-scroll-to-component";
 import styled, { createGlobalStyle } from "styled-components";
 
-import SEO from "./Components/SEO";
-import Millimynd from "./Components/Millimynd";
-import { Break } from "./Components/Utilities/break";
-import SideDrawer from "./Components/SideDrawer/SideDrawer";
-import UmGunnar from "./Components/UmGunnar";
+import {
+  Millimynd,
+  Break,
+  SideDrawer,
+  UmGunnar,
+  Upplysingar,
+  LeftSideContainer
+} from "./Components";
 
-const Background = React.lazy(() =>
-  import("./Components/Millistig/Leftsidecontainer")
-);
-const Showcase = React.lazy(() => import("./Components/synihlutir"));
-const Upplysingar = React.lazy(() => import("./Components/Upplysingar"));
+const Header = React.lazy(() => import("./Components/Header"));
+const Showcase = React.lazy(() => import("./Components/synihlutir/"));
 
 const GlobalStyles = createGlobalStyle`
 html {
@@ -25,82 +24,61 @@ html {
   }
 `;
 
-class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      sideDrawerOpen: false
-    };
-  }
+const App = () => {
+  const [sideDrawerOpen, setSideDrawerOpen] = useState(false);
+  let ProductsRef = createRef();
+  let GunnsoRef = createRef();
+  let ShowcaseRef = createRef();
 
-  drawerToggleClickHandler = e => {
-    this.setState(prevState => {
-      return { sideDrawerOpen: !prevState.sideDrawerOpen };
-    });
+  const drawerToggleClickHandler = e => {
+    setSideDrawerOpen(!sideDrawerOpen);
   };
 
-  _scrollToDiv = e => {
+  const _scrollToDiv = e => {
     switch (e.currentTarget.id) {
       case "vorur":
-        scrollToComponent(this.Products, { duration: 1500 });
+        scrollToComponent(ProductsRef.current, { duration: 1500 });
         break;
       case "umOkkur":
-        scrollToComponent(this.Gunnso, { duration: 1500 });
+        scrollToComponent(GunnsoRef.current, { duration: 1500 });
         break;
       case "synishorn":
-        scrollToComponent(this.Showcase, { duration: 1000 });
+        scrollToComponent(ShowcaseRef.current, { duration: 1000 });
         break;
       default:
-        return this.Products;
+        return ProductsRef;
     }
   };
-
-  render() {
-    return (
-      <AppDiv>
-        <SEO />
-        <GlobalStyles />
+  return (
+    <AppDiv>
+      <GlobalStyles />
+      <Suspense fallback={<div>Loading...</div>}>
         <Header
-          button={this._scrollToDiv}
-          drawerClickHandler={this.drawerToggleClickHandler}
+          button={_scrollToDiv}
+          drawerClickHandler={drawerToggleClickHandler}
         />
-        <Break />
-        <Suspense fallback={<div>Loading...</div>}>
-          <Background
-            ref={section => {
-              this.Products = section;
-            }}
-          />
-        </Suspense>
-        <Break />
-        <Suspense fallback={<div>Loading...</div>}>
-          <Showcase
-            ref={section => {
-              this.Showcase = section;
-            }}
-          />
-        </Suspense>
-        <Break />
-        <Millimynd />
-        <Break />
-        <UmGunnar />
-        <Break />
-        <Suspense fallback={<div>Loading...</div>}>
-          <Upplysingar
-            ref={section => {
-              this.Gunnso = section;
-            }}
-          />
-        </Suspense>
-        <SideDrawer
-          drawerClickHandler={this.drawerToggleClickHandler}
-          show={this.state.sideDrawerOpen}
-          button={this._scrollToDiv}
-        />
-      </AppDiv>
-    );
-  }
-}
+      </Suspense>
+
+      <Break />
+      <LeftSideContainer ref={ProductsRef} />
+      <Break />
+      <Suspense fallback={<div>Loading...</div>}>
+        <Showcase ref={ShowcaseRef} />
+      </Suspense>
+      <Break />
+      <Millimynd />
+      <Break />
+      <UmGunnar />
+      <Break />
+      <Upplysingar ref={GunnsoRef} />
+      <SideDrawer
+        drawerClickHandler={drawerToggleClickHandler}
+        show={sideDrawerOpen}
+        button={_scrollToDiv}
+      />
+    </AppDiv>
+  );
+};
 
 export default App;
 

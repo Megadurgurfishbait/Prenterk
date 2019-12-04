@@ -1,4 +1,4 @@
-import { TweenMax } from "gsap/TweenMax";
+import { TweenMax, TimelineMax, Circ } from "gsap/TweenMax";
 
 function hellomoto([...array], opacityToZero, totalSpeed, staggerSpeed) {
   opacityToZero
@@ -18,19 +18,18 @@ function hellomoto([...array], opacityToZero, totalSpeed, staggerSpeed) {
       );
 }
 
-function handleAnimationIntro(myRef) {
-  return TweenMax.fromTo(
-    myRef,
-    0.5,
-    {
-      x: 200,
-      opacity: 0
-    },
-    {
-      x: 0,
-      opacity: 1 // to end state
-    }
-  );
+function handleAnimationIntroLong(myRef, TitleText1) {
+  let tl = new TimelineMax();
+  return tl
+    .fromTo(TitleText1, 0.5, { opacity: 0, x: -30 }, { opacity: 1, x: 0 })
+    .fromTo(
+      myRef,
+      0.2,
+      { opacity: 0, y: -50, ease: Circ.easeOut },
+      { opacity: 1, y: 0 },
+      1
+    )
+    .delay(0.8);
 }
 
-export { hellomoto, handleAnimationIntro };
+export { hellomoto, handleAnimationIntroLong };

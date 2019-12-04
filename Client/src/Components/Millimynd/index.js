@@ -137,7 +137,7 @@ const Success = styled.h1`
   padding: 0px;
 `;
 const Button = styled.button`
-  z-index: 200000000000000000000000000000000000000000000000000000000;
+  z-index: 2000;
   margin: 4rem auto;
   color: white;
   background-color: #fa5757;
@@ -147,7 +147,7 @@ const Button = styled.button`
   border-radius: 5px;
   font-size: 20px;
   letter-spacing: 1.5px;
-  font-weight: 200;
+  font-weight: 500;
   &:hover {
     cursor: pointer;
   }

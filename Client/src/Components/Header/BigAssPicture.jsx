@@ -3,21 +3,37 @@ import styled from "styled-components";
 import { abomination1 } from "../../Assets/Keyframes";
 import Breakpoints from "../Elements/breakpoints";
 
-const BigAssPicture = () => (
-  <BigTitleDiv>
-    <TextContainer>
-      <TitleContainer>
-        <Title> Prentverk</Title>
-        <Title> Selfoss</Title>
-      </TitleContainer>
-      <ParagraphContainer>
-        <Paragraph />
-      </ParagraphContainer>
-    </TextContainer>
-  </BigTitleDiv>
-);
+const BigAssPicture = React.forwardRef((props, ref) => {
+  return (
+    <BigTitleDiv>
+      <TextContainer>
+        <TitleContainer ref={ref}>
+          <Title> Prentverk</Title>
+          <Title> Selfoss</Title>
+        </TitleContainer>
+        <ParagraphContainer>
+          <Paragraph />
+        </ParagraphContainer>
+      </TextContainer>
+    </BigTitleDiv>
+  );
+});
 
 export default BigAssPicture;
+
+const TextContainer = styled.div`
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 10%;
+  @media (max-width: ${Breakpoints.landscape}px) {
+    padding: 0px;
+    width: 80%;
+  }
+`;
 
 const BigTitleDiv = styled.div`
   display: flex;
@@ -51,22 +67,10 @@ const ParagraphContainer = styled.div`
   height: 50%;
   width: 100%;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-Start;
-  text-align: left;
-`;
 
-const TextContainer = styled.div`
-  width: 50%;
-  height: 100%;
-  margin: 0rem 1rem 0rem 15rem;
-  display: flex;
-  flex-direction: column;
-  @media (max-width: ${Breakpoints.landscape}px) {
-    margin: auto 0px;
-  }
-  @media (max-width: ${Breakpoints.portrait}px) {
-    width: 80%;
+  @media (max-width: ${Breakpoints.phone}px) {
+    align-items: center;
+    width: 100%;
   }
 `;
 
@@ -103,16 +107,14 @@ const Paragraph = styled.p`
   &::after {
     width: 100%;
     content: "";
-    animation: ${abomination1} 15s linear 1;
+    animation: ${abomination1} 7s linear 1;
     animation-fill-mode: forwards;
   }
-  
+
   @media (max-width: ${Breakpoints.landscape}px) {
     width: 120%;
   }
   @media (max-width: ${Breakpoints.portrait}px) {
     width: 80%;
   }
-
- 
 `;

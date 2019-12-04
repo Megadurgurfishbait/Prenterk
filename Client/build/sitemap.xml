@@ -1,16 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-   <url>
-
-      <loc>www.pvs.is/</loc>
-
-      <lastmod>2019-01-02</lastmod>
-
-      <changefreq>yearly</changefreq>
-
-      <priority>1</priority>
-
-   </url>
+<url>
+<loc>http://www.pvs.is/</loc>
+<lastmod>2019-10-04T18:46:58+00:00</lastmod>
+</url>
 </urlset>

@@ -1,29 +1,35 @@
 import React from "react";
-import styled, { ThemeProvider } from "styled-components";
+import styled from "styled-components";
+
 import { Large, Small } from "../../Assets/Header/";
 import Breakpoints from "../Elements/breakpoints";
 import Blackbar from "./Blackbar";
 import BigAssPicture from "./BigAssPicture";
+import { handleAnimationIntroLong } from "../Utilities/Animations";
+
 
 export default function Index({ button, clicks, drawerClickHandler }) {
+  let menuRef = React.createRef();
+  let TitleText1 = React.createRef();
+
+  React.useEffect(() => {
+    handleAnimationIntroLong(menuRef.current, TitleText1.current);
+  }, []);
+
   return (
     <Header>
-      <ThemeProvider theme={theme}>
-        <Blackbar
-          button={button}
-          myClick={clicks}
-          drawerClickHandler={drawerClickHandler}
-        />
-      </ThemeProvider>
-      <BigAssPicture />
+      <Blackbar
+        ref={menuRef}
+        button={button}
+        myClick={clicks}
+        drawerClickHandler={drawerClickHandler}
+      />
+      <BigAssPicture
+        ref={TitleText1}
+      />
     </Header>
   );
 }
-
-const theme = {
-  main: "#231F20"
-};
-
 const Header = styled.div`
   display: flex;
   flex-wrap: wrap;

@@ -6,7 +6,7 @@ import { ReactComponent as Logo } from "./Assets/svg/003-down-arrow.svg";
 import ImageContainer from "./ImageContainer";
 import { opacityChange, upDown, downUp } from "./Assets/Keyframes";
 
-const SynihornPage = React.forwardRef(( props, refs) => {
+const SynihornPage = React.forwardRef((props, refs) => {
   const [chosen, setChosen] = React.useState(0);
   const [text, setText] = React.useState("Jólakort");
 
@@ -95,6 +95,7 @@ const TextContainer = styled.h4`
   margin-top: -40px;
   border-radius: 20px;
   background-color: white;
+  box-shadow: 0px 13px 20px -6px rgba(0, 0, 0, 0.35);
 `;
 
 const H4 = styled.h4`

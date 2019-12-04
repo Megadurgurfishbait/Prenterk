@@ -65,13 +65,14 @@ const Label = styled.label`
   height: 60px;
   position: fixed;
   transition: 0.6s all;
-  z-index: 100000000000000000000;
+  z-index: 1000;
 
   &:hover {
     cursor: pointer;
   }
   ${Button}:checked + & {
-    transform: rotateZ(224deg);
+    transform: rotateZ(360deg);
+    transform-origin: 55% 50%;
     margin: -4px;
   }
 
@@ -95,7 +96,7 @@ const IconCon = styled.div`
   background-color: #fa5757;
   margin: 0;
   padding: 0;
-  z-index: 1000000000000000000;
+  z-index: 1200000 !important;
 
   @media (max-width: ${Breakpoints.landscape}px) {
     height: 60px;

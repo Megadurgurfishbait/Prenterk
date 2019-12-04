@@ -3,7 +3,6 @@ import styled from "styled-components";
 import Breakpoints from "../Elements/breakpoints";
 import SVG from "../../Assets/Modal/check";
 
-
 const BigInput = props => (
   <Container>
     <H4>{props.name}</H4>
@@ -54,7 +53,7 @@ const Container = styled.div`
 
 const H4 = styled.h2`
   text-align: center;
-  font-weight: 100;
+  font-weight: 500;
   font-size: 20px;
   margin: 0px;
   letter-spacing: 2px;

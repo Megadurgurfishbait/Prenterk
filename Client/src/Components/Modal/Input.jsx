@@ -64,7 +64,7 @@ const Container = styled.div`
   }
 `;
 const H4 = styled.h2`
-  font-weight: 100;
+  font-weight: 500;
   font-size: 20px;
   margin: 0px;
   letter-spacing: 2px;

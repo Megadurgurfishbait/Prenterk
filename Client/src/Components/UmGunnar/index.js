@@ -3,9 +3,8 @@ import styled from "styled-components";
 import { Large, Small } from "../../Assets/AboutUs/";
 import useWindowDimensions from "../../Hooks/useWindowDimensions";
 import Breakpoints from "../Elements/breakpoints";
-const UmGunnar = () => {
+const UmGunnar = React.memo(() => {
   const { width } = useWindowDimensions();
-
   return (
     <Container>
       <Info>
@@ -25,7 +24,7 @@ const UmGunnar = () => {
       </Picture>
     </Container>
   );
-};
+});
 
 export default UmGunnar;
 

@@ -1,5 +1,5 @@
-import Large from './owner.png';
-import Small from './ownerSmall.png';
+import Large from './owner.jpg';
+import Small from './ownerSmall.jpg';
 
 export {
     Large,
