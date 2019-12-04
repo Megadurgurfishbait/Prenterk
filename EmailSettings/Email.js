@@ -1,23 +1,14 @@
-
 const password = require("../config");
 const nodemailer = require("nodemailer");
 
 exports.sendEmail = function(req, res) {
-      console.log("HER");
   nodemailer.createTestAccount((err, account) => {
-      console.log("HER1");
     const htmlEmail = `
                   <h3> Upplýsingar </h3>
                   <ul>
-                        <li> <h3>Nafn sendanda: <strong>${
-                          req.body.name
-                        }</strong></h3></li>
-                        <li> <h3>Veffang sendanda: <strong>${
-                          req.body.email
-                        }</strong></h3></li>
-                        <li> <h3>Símanúmer sendanda: <strong>${
-                          req.body.phone
-                        }</strong></h3></li>
+                        <li> <h3>Nafn sendanda: <strong>${req.body.name}</strong></h3></li>
+                        <li> <h3>Veffang sendanda: <strong>${req.body.email}</strong></h3></li>
+                        <li> <h3>Símanúmer sendanda: <strong>${req.body.phone}</strong></h3></li>
                   </ul>
                   
                   <h1> Viðfangsefni: ${req.body.title}</h1>
@@ -30,7 +21,7 @@ exports.sendEmail = function(req, res) {
       service: "gmail",
       auth: {
         user: "prentverkbotti",
-        pass: "Beggihommi1"
+        pass: `${password}`
       },
       tls: {
         rejectUnauthorized: false
